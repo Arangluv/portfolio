@@ -29,6 +29,9 @@ time, mark, audio, video`,
 globalStyle("body", {
   lineHeight: 1,
 });
+globalStyle("body, html", {
+  fontFamily: "sans-serif",
+});
 
 globalStyle("ol, ul", {
   listStyle: "none",
