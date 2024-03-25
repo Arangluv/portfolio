@@ -1,15 +1,19 @@
-import { style } from "@vanilla-extract/css";
+import { style, createVar } from "@vanilla-extract/css";
+import { vars } from "./styles/theme.css";
+const myVar = createVar();
 
-export const myBtn = style({
+const flexBox = style({
   display: "flex",
-  width: 100,
-  justifyContent: "center",
   alignItems: "center",
-  border: "none",
-  backgroundColor: "blue",
-  color: "white",
-  ":hover": {
-    backgroundColor: "pink",
-  },
-  transition: "all .1s ease-in-out",
+  justifyContent: "center",
+  padding: "10px",
 });
+
+export const myBtn = style([
+  flexBox,
+  {
+    backgroundColor: "black",
+    border: "none",
+    color: vars.themeColor.color.mainFontColor,
+  },
+]);

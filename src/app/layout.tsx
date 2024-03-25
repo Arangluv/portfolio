@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
+// import "./theme.css";
+import "./styles/global.css";
+import { darkTheme } from "./styles/theme.css";
 // import { Inter } from "next/font/google";
 // const inter = Inter({ subsets: ["latin"] });
-
+console.log("darkTheme ?");
+console.log(darkTheme);
 export const metadata: Metadata = {
   title: "류현수's Portfolio",
-  description: "웹 포트폴리오 입니다",
+  description: "류현수의 웹 포트폴리오",
 };
 
 export default function RootLayout({
@@ -14,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body className={darkTheme}>{children}</body>
     </html>
   );
 }
