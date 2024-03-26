@@ -25,9 +25,14 @@ time, mark, audio, video`,
     verticalAlign: "baseline",
   }
 );
-
 globalStyle("body", {
   lineHeight: 1,
+  height: "100vh",
+  width: "100%",
+  backgroundColor: "#1D1D20",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
 });
 globalStyle("body, html", {
   fontFamily: "sans-serif",
