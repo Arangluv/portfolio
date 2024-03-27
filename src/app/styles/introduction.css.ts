@@ -3,6 +3,7 @@ import { style, createVar } from "@vanilla-extract/css";
 
 const gradient_1 = createVar();
 const gradient_2 = createVar();
+
 export const intro_wrapper = style({
   width: "100%",
   height: "50vh",

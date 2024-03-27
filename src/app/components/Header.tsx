@@ -1,5 +1,11 @@
+import * as style from "../styles/header.css";
+import GithubIcon from "../../../public/assets/github.svg";
 const Header = () => {
-  return <h1>이건 헤더</h1>;
+  return (
+    <div className={style.header_wrapper}>
+      <GithubIcon className={style.icon} />
+    </div>
+  );
 };
 
 export default Header;
