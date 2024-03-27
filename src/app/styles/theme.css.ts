@@ -37,7 +37,7 @@ export const darkTheme = createTheme(themeColor, {
   color: {
     mainBackGround: "#1D1D20",
     contentBackGround: "#2c2c2c",
-    mainFontColor: "#ffffff",
+    mainFontColor: "#CCCCCC",
     borderColor: "#b1b1b3",
   },
 });

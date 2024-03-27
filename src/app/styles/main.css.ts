@@ -27,7 +27,7 @@ export const grid_item = style({
   justifyContent: "center",
   color: vars.themeColor.color.mainFontColor,
 });
-export const grid_item_2 = style([
+export const main_content_wrapper = style([
   grid_item,
   {
     gridColumn: "1 / 2",
