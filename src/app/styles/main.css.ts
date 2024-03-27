@@ -15,7 +15,7 @@ export const main_wrapper = style({
   width: "100%",
   height: "100%",
   gridTemplateColumns: "3fr 1fr",
-  gridTemplateRows: "1fr 6fr 1fr",
+  gridTemplateRows: "2fr 2fr 6fr 2fr",
   gap: 20,
 });
 
@@ -31,7 +31,7 @@ export const main_content_wrapper = style([
   grid_item,
   {
     gridColumn: "1 / 2",
-    gridRow: "1 / 4",
+    gridRow: "1 / 5",
   },
 ]);
 
@@ -43,7 +43,15 @@ export const grid_item_3 = style([
     backgroundColor: vars.themeColor.color.mainBackGround,
   },
 ]);
-
+export const category_title = style({
+  color: vars.themeColor.color.mainFontColor,
+  fontSize: vars.fontSize.medium,
+  width: "100%",
+  height: "90%",
+  display: "flex",
+  alignItems: "flex-end",
+  fontWeight: vars.fontWeight.normal,
+});
 export const top_left_corner = style({
   position: "absolute", // 나이스
   top: 0,
