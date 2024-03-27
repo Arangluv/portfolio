@@ -40,7 +40,6 @@ export const paragraph_wrapper = style({
     content: " ",
     width: 2,
     position: "absolute",
-    backgroundColor: "red",
     top: 0,
     bottom: 0,
     left: 3,

@@ -4,6 +4,7 @@ import CornerBottomRight from "./components/ConnerBottomRight";
 import CornerTopLeft from "./components/CornerTopLeft";
 import Introduction from "./components/Introduction";
 import Header from "./components/Header";
+import Category from "./components/Category";
 export default function Home() {
   return (
     <div className={style.main_frame}>
@@ -14,10 +15,11 @@ export default function Home() {
           <Header />
         </header>
         <div className={style.grid_item}>
-          <h2 className={style.category_title}>Categorys</h2>
+          <h2 className={style.category_title}>Category</h2>
         </div>
         <nav className={style.grid_item_3}>
           <div className={style.top_left_category_corner}></div>
+          <Category />
         </nav>
         <footer className={style.grid_item}></footer>
       </main>
