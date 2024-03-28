@@ -1,14 +1,14 @@
 "use client";
 
-import { darkTheme, lightTheme } from "../styles/theme.css";
+import { darkTheme_1, darkTheme_2 } from "../styles/theme.css";
 import { ThemeProvider } from "next-themes";
 
 const Provider = ({ children }: { children: React.ReactNode }) => {
   return (
     <ThemeProvider
       attribute="class"
-      defaultTheme="dark"
-      value={{ light: lightTheme, dark: darkTheme }}
+      defaultTheme="dark_1"
+      value={{ dark_1: darkTheme_1, dark_2: darkTheme_2 }}
     >
       {children}
     </ThemeProvider>

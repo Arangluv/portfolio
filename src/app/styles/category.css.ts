@@ -24,6 +24,6 @@ export const list_item = style({
 export const list_text = style({
   paddingBottom: 5,
   borderBottom: "1px solid transparent",
-  borderImage: "linear-gradient(90deg, #765B87 0%, #73D661 100%)",
+  borderImage: `linear-gradient(90deg, ${vars.themeColor.color.gradient_start} 0%, ${vars.themeColor.color.gradient_end} 100%)`,
   borderImageSlice: 1,
 });

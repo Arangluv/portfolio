@@ -1,3 +1,5 @@
+import * as style from "../styles/main.css";
+
 const CornerTopLeft = ({ className }: { className: string }) => {
   return (
     <svg
@@ -9,9 +11,9 @@ const CornerTopLeft = ({ className }: { className: string }) => {
     >
       <defs>
         <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0" stopColor="#765B87" />
-          <stop offset="0.5" stopColor="#73D661" />
-          <stop offset="1" stopColor="#73D661" />
+          <stop className={style.stop_start} offset="0" />
+          <stop className={style.stop_middle} offset="0.5" />
+          <stop className={style.stop_end} offset="1" />
         </linearGradient>
       </defs>
       <path

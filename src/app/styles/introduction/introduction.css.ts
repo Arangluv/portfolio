@@ -1,8 +1,5 @@
 import { vars } from "../theme.css";
-import { style, createVar } from "@vanilla-extract/css";
-
-const gradient_1 = createVar();
-const gradient_2 = createVar();
+import { style } from "@vanilla-extract/css";
 
 export const intro_wrapper = style({
   width: "100%",
@@ -30,10 +27,6 @@ export const sub_title = style([
   },
 ]);
 export const paragraph_wrapper = style({
-  vars: {
-    [gradient_1]: "#765B87",
-    [gradient_2]: "#73D661",
-  },
   position: "relative",
   paddingLeft: 20,
   "::before": {
@@ -43,16 +36,12 @@ export const paragraph_wrapper = style({
     top: 0,
     bottom: 0,
     left: 3,
-    background: `linear-gradient(to bottom, ${gradient_1} 0%, ${gradient_2} 100%)`,
+    background: `linear-gradient(to bottom, ${vars.themeColor.color.gradient_start} 0%, ${vars.themeColor.color.gradient_end} 100%)`,
   },
 });
 export const paragraph = style({
   lineHeight: 1.6,
   color: vars.themeColor.color.mainFontColor,
   padding: "5px 10px",
-  //   borderLeft: `1px solid ${vars.themeColor.color.mainFontColor}`,
   fontWeight: vars.fontWeight.medium,
-
-  //   borderImage: "linear-gradient(to right, red 0%, orange 100%)",
-  //   borderImageSlice: 1,
 });

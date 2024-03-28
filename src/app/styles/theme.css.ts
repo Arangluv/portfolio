@@ -30,24 +30,33 @@ const themeColor = createThemeContract({
     contentBackGround: null,
     mainFontColor: null,
     borderColor: null,
+    gradient_start: null,
+    gradient_middle: null, // only use corner bottom right
+    gradient_end: null,
   },
 });
 
-export const darkTheme = createTheme(themeColor, {
+export const darkTheme_1 = createTheme(themeColor, {
   color: {
     mainBackGround: "#1D1D20",
     contentBackGround: "#2c2c2c",
     mainFontColor: "#CCCCCC",
     borderColor: "#b1b1b3",
+    gradient_start: "#765B87",
+    gradient_middle: "#6ca761",
+    gradient_end: "#73D661",
   },
 });
 
-export const lightTheme = createTheme(themeColor, {
+export const darkTheme_2 = createTheme(themeColor, {
   color: {
-    mainBackGround: "#f7f9fa",
-    contentBackGround: "#ffffff",
-    mainFontColor: "#2c2c2c",
-    borderColor: "#cbc9f9",
+    mainBackGround: "#1D1D20",
+    contentBackGround: "#2c2c2c",
+    mainFontColor: "#CCCCCC",
+    borderColor: "#b1b1b3",
+    gradient_start: "#765B87",
+    gradient_middle: "#6ca761",
+    gradient_end: "#73D661",
   },
 });
 

@@ -18,6 +18,15 @@ export const main_wrapper = style({
   gridTemplateRows: "2fr 2fr 6fr 2fr",
   gap: 20,
 });
+export const stop_start = style({
+  stopColor: vars.themeColor.color.gradient_start,
+});
+export const stop_middle = style({
+  stopColor: vars.themeColor.color.gradient_middle,
+});
+export const stop_end = style({
+  stopColor: vars.themeColor.color.gradient_end,
+});
 
 export const grid_item = style({
   width: "100%",
@@ -65,7 +74,7 @@ export const top_left_category_corner = style({
   height: 150,
   borderTopLeftRadius: 10,
   zIndex: -1,
-  background: "linear-gradient(135deg, #765B87 0%, #73D661 50%, #73D661 100%)",
+  background: `linear-gradient(135deg, ${vars.themeColor.color.gradient_start} 0%, ${vars.themeColor.color.gradient_end} 50%, ${vars.themeColor.color.gradient_end} 100%)`,
 });
 export const bottom_right_corner = style({
   position: "absolute",
