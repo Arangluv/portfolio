@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-// import "./theme.css";
+import { Noto_Sans_KR, Karla } from "next/font/google";
 import "./styles/global.css";
 import Provider from "./context/ThemeProvider";
 // import { Inter } from "next/font/google";
@@ -10,6 +10,14 @@ export const metadata: Metadata = {
   description: "류현수의 웹 포트폴리오",
 };
 
+const notoSansKr = Noto_Sans_KR({
+  weight: ["400"],
+  subsets: ["latin"],
+});
+const karla = Karla({
+  weight: ["400"],
+  subsets: ["latin"],
+});
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -17,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>
+      <body className={(notoSansKr.className, karla.className)}>
         <Provider>{children}</Provider>
       </body>
     </html>

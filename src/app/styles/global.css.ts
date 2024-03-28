@@ -34,9 +34,6 @@ globalStyle("body", {
   justifyContent: "center",
   alignItems: "center",
 });
-globalStyle("body, html", {
-  fontFamily: "sans-serif",
-});
 
 globalStyle("ol, ul", {
   listStyle: "none",
