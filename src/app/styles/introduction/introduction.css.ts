@@ -1,4 +1,4 @@
-import { vars } from "./theme.css";
+import { vars } from "../theme.css";
 import { style, createVar } from "@vanilla-extract/css";
 
 const gradient_1 = createVar();

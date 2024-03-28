@@ -1,4 +1,4 @@
-import * as style from "../styles/introduction.css";
+import * as style from "../styles/introduction/introduction.css";
 
 const Introduction = ({ className }: { className: string }) => {
   return (
