@@ -5,6 +5,7 @@ import CornerTopLeft from "./components/CornerTopLeft";
 import Introduction from "./components/Introduction";
 import Header from "./components/Header";
 import Category from "./components/Category";
+import Footer from "./components/Footer";
 export default function Home() {
   return (
     <div className={style.main_frame}>
@@ -21,7 +22,9 @@ export default function Home() {
           <div className={style.top_left_category_corner}></div>
           <Category />
         </nav>
-        <footer className={style.grid_item}></footer>
+        <footer className={style.grid_item}>
+          <Footer />
+        </footer>
       </main>
       <CornerBottomRight
         className={style.bottom_right_corner}
