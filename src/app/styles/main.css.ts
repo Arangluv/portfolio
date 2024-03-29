@@ -42,9 +42,9 @@ export const grid_item = style({
 export const main_content_wrapper = style([
   grid_item,
   {
-    border: `1px solid rgba(255,255,255,0.2)`,
     gridColumn: "1 / 2",
     gridRow: "1 / 5",
+    border: "1px solid red",
   },
 ]);
 
