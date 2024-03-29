@@ -14,7 +14,7 @@ export const list_item = style({
   marginBottom: 25,
   color: vars.themeColor.color.mainFontColor,
   fontSize: vars.fontSize.regular,
-  transition: "all .3s ease-in-out",
+  transition: "all .25s ease-in-out",
   position: "relative",
   ":hover": {
     cursor: "pointer",
@@ -26,4 +26,10 @@ export const list_text = style({
   borderBottom: "1px solid transparent",
   borderImage: `linear-gradient(90deg, ${vars.themeColor.color.gradient_start} 0%, ${vars.themeColor.color.gradient_end} 100%)`,
   borderImageSlice: 1,
+  transition: "all .2s ease-in-out",
+  ":hover": {
+    letterSpacing: 1.2,
+    borderImage: `linear-gradient(90deg, ${vars.themeColor.color.gradient_end} 0%, ${vars.themeColor.color.gradient_start} 100%)`,
+    borderImageSlice: 1,
+  },
 });

@@ -19,12 +19,15 @@ export const main_wrapper = style({
   gap: 20,
 });
 export const stop_start = style({
+  transition: "all .2s ease-in-out",
   stopColor: vars.themeColor.color.gradient_start,
 });
 export const stop_middle = style({
+  transition: "all .2s ease-in-out",
   stopColor: vars.themeColor.color.gradient_middle,
 });
 export const stop_end = style({
+  transition: "all .2s ease-in-out",
   stopColor: vars.themeColor.color.gradient_end,
 });
 
@@ -39,6 +42,7 @@ export const grid_item = style({
 export const main_content_wrapper = style([
   grid_item,
   {
+    border: `1px solid rgba(255,255,255,0.2)`,
     gridColumn: "1 / 2",
     gridRow: "1 / 5",
   },
@@ -59,10 +63,11 @@ export const category_title = style({
   height: "90%",
   display: "flex",
   alignItems: "flex-end",
+  filter: "brightness(1.2)",
   fontWeight: vars.fontWeight.normal,
 });
 export const top_left_corner = style({
-  position: "absolute", // 나이스
+  position: "absolute",
   top: 0,
   left: 0,
 });
@@ -73,6 +78,7 @@ export const top_left_category_corner = style({
   width: 150,
   height: 150,
   borderTopLeftRadius: 10,
+  transition: "all 3s ease-in-out",
   zIndex: -1,
   background: `linear-gradient(135deg, ${vars.themeColor.color.gradient_start} 0%, ${vars.themeColor.color.gradient_end} 50%, ${vars.themeColor.color.gradient_end} 100%)`,
 });

@@ -9,6 +9,7 @@ export const intro_wrapper = style({
   justifyContent: "center",
   alignItems: "center",
   padding: 40,
+  paddingRight: 250,
 });
 
 export const main_title = style({
@@ -37,6 +38,7 @@ export const paragraph_wrapper = style({
     bottom: 0,
     left: 3,
     background: `linear-gradient(to bottom, ${vars.themeColor.color.gradient_start} 0%, ${vars.themeColor.color.gradient_end} 100%)`,
+    transition: "background 5s ease-out",
   },
 });
 export const paragraph = style({
