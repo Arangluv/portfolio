@@ -86,7 +86,7 @@ const Skills = () => {
             <span className={style.icon_title}>MongoDB</span>
           </div>
           <div className={style.icon_container}>
-            <MongooseIcon className={style.mongodb_icon} />
+            <MongooseIcon className={style.mongoose_icon} />
             <span className={style.icon_title}>mongoose</span>
           </div>
         </div>

@@ -14,9 +14,9 @@ export const grid_item = style({
   padding: 10,
   display: "flex",
   flexDirection: "column",
-  border: "1px solid rgba(255,255,255,0.2)",
   borderRadius: 20,
   boxSizing: "border-box",
+  backgroundColor: vars.themeColor.color.contentBackGround,
 });
 
 export const front_stack_item = style([
@@ -38,10 +38,12 @@ export const back_stack_item = style([
 // grid item 내부에 있는 title
 
 export const title = style({
-  color: vars.themeColor.color.mainFontColor,
+  color: "white",
   fontSize: vars.fontSize.regular,
   fontWeight: vars.fontWeight.normal,
   marginBottom: 10,
+  paddingTop: 5,
+  paddingLeft: 5,
 });
 
 // 내부에 담기는 icon container
@@ -67,7 +69,7 @@ export const icon_container = style({
 export const icon_title = style({
   marginTop: 10,
   fontWeight: vars.fontWeight.large,
-  color: vars.themeColor.color.mainFontColor,
+  color: "vars.themeColor.color.mainFontColor",
 });
 export const icon_size = style({
   width: 80,
@@ -90,7 +92,7 @@ export const styledcomponents_icon = style([icon_size, { fill: "#FFCF44" }]);
 export const nodejs_icon = style([icon_size, { fill: "#339933" }]);
 export const expressjs_icon = style([icon_size, { fill: "#ffffff" }]);
 export const mongodb_icon = style([icon_size, { fill: "#47A248" }]);
-export const mongoose_icon = style([icon_size, { fill: "#880000" }]);
+export const mongoose_icon = style([icon_size, { fill: "#c70404" }]);
 
 // depolyment icon
 export const aws_icon = style([icon_size, { fill: "#FF9900" }]);
