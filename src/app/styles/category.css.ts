@@ -8,10 +8,10 @@ export const wrapper = style({
   boxSizing: "border-box",
   display: "flex",
   flexDirection: "column",
+  alignItems: "flex-start",
 });
 
 export const list_item = style({
-  marginBottom: 25,
   color: vars.themeColor.color.mainFontColor,
   fontSize: vars.fontSize.regular,
   transition: "all .25s ease-in-out",
@@ -20,6 +20,12 @@ export const list_item = style({
     cursor: "pointer",
     filter: "brightness(1.3)",
   },
+});
+
+export const link = style({
+  marginBottom: 25,
+  textDecoration: "none",
+  boxSizing: "border-box",
 });
 export const list_text = style({
   paddingBottom: 5,

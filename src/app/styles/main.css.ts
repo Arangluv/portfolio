@@ -44,7 +44,6 @@ export const main_content_wrapper = style([
   {
     gridColumn: "1 / 2",
     gridRow: "1 / 5",
-    border: "1px solid red",
   },
 ]);
 
