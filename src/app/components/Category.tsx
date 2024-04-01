@@ -22,7 +22,7 @@ const Category = () => {
         </li>
       </Link>
       <Link href="/projects" className={style.link}>
-        <li className={style.list_item}>
+        <li onClick={() => setTheme("dark_3")} className={style.list_item}>
           <span className={style.list_text}>Project</span>
         </li>
       </Link>
