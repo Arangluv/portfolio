@@ -38,7 +38,6 @@ export const main_content_wrapper = style({
   gridColumn: "2 / 3",
   gridTemplateColumns: "1fr 1fr",
   gridTemplateRows: "1.2fr 20fr",
-  border: "1px solid red",
   gap: 10,
 });
 export const header_item = style([
@@ -60,5 +59,34 @@ export const progress_state_item = style([
   {
     gridColumn: "2 / 3",
     gridRow: "2 / 3",
+  },
+]);
+
+export const btn_icon = style({
+  width: 50,
+  height: 50,
+  transition: "all .2s ease-in-out",
+  ":hover": {
+    cursor: "pointer",
+    filter: "brightness(1.2)",
+  },
+});
+const progressive_dot = style({
+  width: 10,
+  height: 10,
+  margin: "0 3px",
+  borderRadius: "100%",
+  backgroundColor: vars.themeColor.color.mainFontColor,
+});
+export const progressiv_dot_active = style([
+  progressive_dot,
+  {
+    transform: "scale(1.5)",
+  },
+]);
+export const progressiv_dot_inactive = style([
+  progressive_dot,
+  {
+    opacity: 0.7,
   },
 ]);
