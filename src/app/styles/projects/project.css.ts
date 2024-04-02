@@ -16,7 +16,6 @@ export const project_wrapper = style({
 });
 
 export const grid_item = style({
-  border: "1px solid rgba(255,255,255,0.2)",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -45,7 +44,7 @@ export const main_content_wrapper = style({
   gridRow: "1 / 2",
   gridColumn: "2 / 3",
   gridTemplateColumns: "1fr 1fr",
-  gridTemplateRows: "1.2fr 20fr",
+  gridTemplateRows: "2fr 20fr",
   gap: 10,
 });
 export const header_item = style([
@@ -73,9 +72,20 @@ export const slider_moveable = style({
   height: computedHeight,
   transition: "all .5s ease-in-out",
 });
-export const picture_wrapper_item = style([grid_item, {}]);
+export const picture_wrapper_item = style([
+  grid_item,
+  {
+    position: "relative",
+    border: "1px solid rgba(255,255,255,0.2)",
+  },
+]);
 
-export const introduction_item = style([grid_item, {}]);
+export const introduction_item = style([
+  grid_item,
+  {
+    border: "1px solid rgba(255,255,255,0.2)",
+  },
+]);
 
 export const progress_state_item = style([
   grid_item,
@@ -126,3 +136,59 @@ export const progressiv_dot_inactive = style([
     transition: "all .2s ease-in-out",
   },
 ]);
+
+// 이미지 내부 slider btn part
+
+export const image_slider_btn_wrapper = style({
+  display: "grid",
+  gridTemplateColumns: "1fr 2fr 1fr",
+  position: "absolute",
+  width: 200,
+  height: 40,
+  borderRadius: 30,
+
+  bottom: 5,
+  left: "50%",
+  transform: "translateX(-50%)",
+});
+
+export const image_slider_btn_item = style({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: vars.themeColor.color.mainBackGround,
+  opacity: "0.8",
+});
+
+export const image_slider_prev_item = style([
+  image_slider_btn_item,
+  {
+    borderTopLeftRadius: 30,
+    borderBottomLeftRadius: 30,
+  },
+]);
+export const image_slider_next_item = style([
+  image_slider_btn_item,
+  {
+    borderTopRightRadius: 30,
+    borderBottomRightRadius: 30,
+  },
+]);
+
+export const image_icon = style([
+  btn_icon,
+  {
+    width: 30,
+    height: 30,
+    color: vars.themeColor.color.mainFontColor,
+    ":hover": {
+      opacity: 1,
+      filter: "brightness(2)",
+    },
+  },
+]);
+
+export const image_count_text = style({
+  color: vars.themeColor.color.mainFontColor,
+  fontWeight: vars.fontWeight.large,
+});
