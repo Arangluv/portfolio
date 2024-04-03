@@ -72,4 +72,16 @@ export const darkTheme_3 = createTheme(themeColor, {
   },
 });
 
+export const darkTheme_4 = createTheme(themeColor, {
+  color: {
+    mainBackGround: "#1D1D20",
+    contentBackGround: "#2c2c2c",
+    mainFontColor: "#CCCCCC",
+    borderColor: "#b1b1b3",
+    gradient_start: "#94E0DA",
+    gradient_middle: "#907AF3",
+    gradient_end: "#907AF3",
+  },
+});
+
 export const vars = { ...global, themeColor };

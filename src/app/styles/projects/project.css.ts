@@ -39,13 +39,14 @@ export const next_btn_item = style([
 
 export const main_content_wrapper = style({
   minWidth: computedWidth,
+  maxWidth: computedWidth,
   height: computedHeight,
   display: "grid",
   gridRow: "1 / 2",
   gridColumn: "2 / 3",
   gridTemplateColumns: "1fr 1fr",
   gridTemplateRows: "2fr 20fr",
-  gap: 10,
+  gap: 20,
 });
 export const header_item = style([
   grid_item,
@@ -72,18 +73,24 @@ export const slider_moveable = style({
   height: computedHeight,
   transition: "all .5s ease-in-out",
 });
+
+// export const grid_item = style({
+//   display: "flex",
+//   justifyContent: "center",
+//   alignItems: "center",
+// });
 export const picture_wrapper_item = style([
   grid_item,
   {
     position: "relative",
-    border: "1px solid rgba(255,255,255,0.2)",
   },
 ]);
 
 export const introduction_item = style([
   grid_item,
   {
-    border: "1px solid rgba(255,255,255,0.2)",
+    overflow: "hidden",
+    gap: 20,
   },
 ]);
 
@@ -191,4 +198,63 @@ export const image_icon = style([
 export const image_count_text = style({
   color: vars.themeColor.color.mainFontColor,
   fontWeight: vars.fontWeight.large,
+});
+
+// project 설명 part
+
+export const project_introduction_wrapper = style({
+  width: "100%",
+  height: "100%",
+  padding: 10,
+  boxSizing: "border-box",
+  display: "flex",
+  flexDirection: "column",
+});
+
+export const introduction_sub_wrapper = style({
+  display: "grid",
+  gridTemplateColumns: "2.5fr 8fr",
+  marginBottom: 15,
+  gap: 10,
+});
+
+export const seperated_wrapper = style([
+  introduction_sub_wrapper,
+  {
+    paddingTop: 15,
+    borderTop: "1px solid rgba(255,255,255, 0.2)",
+  },
+]);
+
+export const introduction_front = style({});
+export const introduction_rear = style({
+  overflow: "hidden",
+});
+export const intro_sub_title = style({
+  lineHeight: "1.6",
+  opacity: 0.8,
+});
+export const intro_sub_title_accent = style({
+  lineHeight: "1.6",
+  color: "rgb(226,232,240)",
+  fontWeight: vars.fontWeight.large,
+});
+export const intro_description = style({
+  width: "100%",
+  wordBreak: "break-all",
+  whiteSpace: "pre-line",
+  lineHeight: "1.6",
+  display: "flex",
+});
+
+export const intro_description_link = style([
+  intro_description,
+  {
+    fontWeight: vars.fontWeight.large,
+    color: vars.themeColor.color.mainFontColor,
+  },
+]);
+export const introduction_rear_skill = style({
+  overflow: "hidden",
+  display: "flex",
 });
