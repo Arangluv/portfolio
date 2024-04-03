@@ -27,7 +27,7 @@ const Category = () => {
         </li>
       </Link>
       <Link href="/archives" className={style.link}>
-        <li className={style.list_item}>
+        <li onClick={() => setTheme("dark_4")} className={style.list_item}>
           <span className={style.list_text}>Archiving</span>
         </li>
       </Link>

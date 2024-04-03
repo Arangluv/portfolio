@@ -78,9 +78,9 @@ export const darkTheme_4 = createTheme(themeColor, {
     contentBackGround: "#2c2c2c",
     mainFontColor: "#CCCCCC",
     borderColor: "#b1b1b3",
-    gradient_start: "#94E0DA",
-    gradient_middle: "#907AF3",
-    gradient_end: "#907AF3",
+    gradient_start: "#F2017B",
+    gradient_middle: "#680DB0",
+    gradient_end: "#680DB0",
   },
 });
 
