@@ -19,7 +19,6 @@ const Project = () => {
     contentWidth: 0,
     contentHeight: 0,
   });
-
   useEffect(() => {
     setMounted(true);
     setContentStyleInfo({

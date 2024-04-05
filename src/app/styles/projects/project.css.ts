@@ -1,9 +1,10 @@
 import { vars } from "../theme.css";
 import { createVar, style } from "@vanilla-extract/css";
 
-export const computedWidth = createVar();
-export const computedHeight = createVar();
-
+export const totalContentWidth = createVar();
+export const totalContentHeight = createVar();
+export const imageContentWidth = createVar();
+export const imageContentHeight = createVar();
 export const project_wrapper = style({
   display: "grid",
   gridTemplateColumns: "1fr 20fr 1fr",
@@ -38,9 +39,8 @@ export const next_btn_item = style([
 ]);
 
 export const main_content_wrapper = style({
-  minWidth: computedWidth,
-  maxWidth: computedWidth,
-  height: computedHeight,
+  minWidth: totalContentWidth,
+  height: totalContentHeight,
   display: "grid",
   gridRow: "1 / 2",
   gridColumn: "2 / 3",
@@ -69,20 +69,28 @@ export const slider_moveable = style({
   display: "flex",
   flexWrap: "nowrap",
   flexShrink: 0,
-  width: `${Number(computedWidth) * 3}`,
-  height: computedHeight,
+  height: totalContentHeight,
   transition: "all .5s ease-in-out",
 });
 
-// export const grid_item = style({
-//   display: "flex",
-//   justifyContent: "center",
-//   alignItems: "center",
-// });
+export const image_slider_moveable = style({
+  display: "flex",
+  height: imageContentHeight,
+  position: "absolute",
+  top: 0,
+  left: 0,
+  flexWrap: "nowrap",
+  flexShrink: 0,
+  transition: "all .5s ease-in-out",
+});
+
 export const picture_wrapper_item = style([
   grid_item,
   {
     position: "relative",
+    overflow: "hidden",
+    width: imageContentWidth,
+    height: imageContentHeight,
   },
 ]);
 
@@ -181,7 +189,10 @@ export const image_slider_next_item = style([
     borderBottomRightRadius: 30,
   },
 ]);
-
+export const image_size = style({
+  width: imageContentWidth,
+  height: imageContentHeight,
+});
 export const image_icon = style([
   btn_icon,
   {
@@ -194,7 +205,17 @@ export const image_icon = style([
     },
   },
 ]);
-
+export const image_icon_disable = style([
+  image_icon,
+  {
+    opacity: 0.7,
+    ":hover": {
+      cursor: "default",
+      opacity: 0.7,
+      filter: "none",
+    },
+  },
+]);
 export const image_count_text = style({
   color: vars.themeColor.color.mainFontColor,
   fontWeight: vars.fontWeight.large,
