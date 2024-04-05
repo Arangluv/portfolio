@@ -258,3 +258,15 @@ export const introduction_rear_skill = style({
   overflow: "hidden",
   display: "flex",
 });
+export const skill_wrapper = style({
+  backgroundColor: vars.themeColor.color.mainFontColor,
+  marginRight: 15,
+  padding: "10px 15px",
+  borderRadius: "30px",
+});
+
+export const skill_text = style({
+  color: vars.themeColor.color.mainBackGround,
+  fontSize: vars.fontSize.small,
+  fontWeight: vars.fontWeight.large,
+});
