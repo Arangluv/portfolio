@@ -39,17 +39,19 @@ export default function RootLayout({
               <section className={style.main_content_wrapper}>
                 {children}
               </section>
-              <header className={style.grid_item}>
+              <header
+                className={`${style.grid_item} ${style.grid_order_second}`}
+              >
                 <Header />
               </header>
-              <div className={style.grid_item}>
+              <div className={`${style.grid_item} ${style.grid_order_first}`}>
                 <h2 className={style.category_title}>Category</h2>
               </div>
-              <nav className={style.grid_item_3}>
+              <nav className={`${style.grid_item_3} ${style.grid_order_third}`}>
                 <div className={style.top_left_category_corner}></div>
                 <Category />
               </nav>
-              <footer className={style.grid_item}>
+              <footer className={`${style.grid_item} ${style.grid_order_last}`}>
                 <Footer />
               </footer>
             </main>

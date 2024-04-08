@@ -63,6 +63,34 @@ export const grid_item = style({
   boxSizing: "border-box",
   color: vars.themeColor.color.mainFontColor,
 });
+export const grid_order_first = style({
+  "@media": {
+    "screen and (max-width:479px)": {
+      order: 1,
+    },
+  },
+});
+export const grid_order_second = style({
+  "@media": {
+    "screen and (max-width:479px)": {
+      order: 2,
+    },
+  },
+});
+export const grid_order_third = style({
+  "@media": {
+    "screen and (max-width:479px)": {
+      order: 3,
+    },
+  },
+});
+export const grid_order_last = style({
+  "@media": {
+    "screen and (max-width:479px)": {
+      order: 3,
+    },
+  },
+});
 export const main_content_wrapper = style([
   grid_item,
   {
@@ -95,6 +123,18 @@ export const category_title = style({
   alignItems: "flex-end",
   filter: "brightness(1.2)",
   fontWeight: vars.fontWeight.normal,
+  "@media": {
+    "screen and (min-width:1024px) and (max-width:1279px)": {
+      // 테블릿 가로 & 노트북
+      fontSize: vars.fontSize.regular,
+    },
+
+    "screen and (max-width:479px)": {
+      // 모바일 세로
+      fontSize: vars.fontSize.regular,
+      alignItems: "center",
+    },
+  },
 });
 export const top_left_corner = style({
   position: "absolute",
