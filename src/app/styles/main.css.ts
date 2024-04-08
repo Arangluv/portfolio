@@ -8,6 +8,21 @@ export const main_frame = style({
   padding: 40,
   boxSizing: "border-box",
   position: "relative",
+  "@media": {
+    "screen and (min-width:1024px) and (max-width:1279px)": {
+      height: "95vh",
+    },
+    "screen and (min-width:768px) and (max-width:1023px)": {
+      height: "95vh",
+    },
+    "screen and (min-width:480px) and (max-width:767px)": {
+      height: "95vh",
+    },
+    "screen and (max-width:479px)": {
+      width: "100vw",
+      height: "100vh",
+    },
+  },
 });
 
 export const main_wrapper = style({
@@ -16,7 +31,15 @@ export const main_wrapper = style({
   height: "100%",
   gridTemplateColumns: "3fr 1fr",
   gridTemplateRows: "2fr 2fr 6fr 2fr",
+  boxSizing: "border-box",
   gap: 20,
+  "@media": {
+    "screen and (max-width:479px)": {
+      // 모바일
+      gridTemplateRows: "20fr 1fr 1fr 1fr",
+      gap: 5,
+    },
+  },
 });
 export const stop_start = style({
   transition: "all .2s ease-in-out",
@@ -37,6 +60,7 @@ export const grid_item = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  boxSizing: "border-box",
   color: vars.themeColor.color.mainFontColor,
 });
 export const main_content_wrapper = style([
@@ -44,6 +68,13 @@ export const main_content_wrapper = style([
   {
     gridColumn: "1 / 2",
     gridRow: "1 / 5",
+    "@media": {
+      "screen and (max-width:479px)": {
+        gridColumn: "1 / 3",
+        gridRow: "1 / 3",
+        // 모바일
+      },
+    },
   },
 ]);
 

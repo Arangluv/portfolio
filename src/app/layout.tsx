@@ -4,7 +4,6 @@ import "./styles/global.css";
 import Provider from "./context/ThemeProvider";
 import CornerTopLeft from "./components/CornerTopLeft";
 import * as style from "./styles/main.css";
-import Introduction from "./components/Introduction";
 import Header from "./components/Header";
 import Category from "./components/Category";
 import Footer from "./components/Footer";

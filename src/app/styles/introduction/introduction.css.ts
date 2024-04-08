@@ -10,6 +10,18 @@ export const intro_wrapper = style({
   alignItems: "center",
   padding: 40,
   paddingRight: 250,
+  "@media": {
+    "screen and (min-width:1024px) and (max-width:1279px)": {
+      // 테블릿 가로 & 노트북
+      paddingRight: 50,
+    },
+    "screen and (max-width:479px)": {
+      // 모바일
+      padding: 5,
+      boxSizing: "border-box",
+      overflow: "hidden",
+    },
+  },
 });
 
 export const main_title = style({
@@ -17,6 +29,17 @@ export const main_title = style({
   fontSize: vars.fontSize.XLarge,
   width: "100%",
   marginBottom: 20,
+  "@media": {
+    "screen and (min-width:1024px) and (max-width:1279px)": {
+      // 테블릿 가로 & 노트북
+      fontSize: vars.fontSize.large,
+    },
+    "screen and (max-width:479px)": {
+      // 모바일
+      fontSize: vars.fontSize.large,
+      marginBottom: 25,
+    },
+  },
 });
 
 export const sub_title = style([
@@ -25,6 +48,17 @@ export const sub_title = style([
     fontSize: vars.fontSize.regular,
     opacity: "0.9",
     marginBottom: 50,
+    "@media": {
+      "screen and (min-width:1024px) and (max-width:1279px)": {
+        // 테블릿 가로 & 노트북
+        fontSize: vars.fontSize.small,
+      },
+      "screen and (max-width:479px)": {
+        // 모바일
+        fontSize: vars.fontSize.micro,
+        marginBottom: 0,
+      },
+    },
   },
 ]);
 export const paragraph_wrapper = style({
@@ -46,4 +80,13 @@ export const paragraph = style({
   color: vars.themeColor.color.mainFontColor,
   padding: "5px 10px",
   fontWeight: vars.fontWeight.medium,
+  "@media": {
+    "screen and (min-width:1024px) and (max-width:1279px)": {
+      // 테블릿 가로 & 노트북
+      fontSize: vars.fontSize.small,
+    },
+    "screen and (max-width:479px)": {
+      display: "none",
+    },
+  },
 });

@@ -3,11 +3,11 @@ import { stop_start, stop_end, stop_middle } from "../styles/main.css";
 const CornerBottomRight = ({ className }: { className: string }) => {
   return (
     <svg
-      width="300"
-      height="300"
       data-name="corner-bottom-right"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      width={300}
+      height={300}
     >
       <defs>
         <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
