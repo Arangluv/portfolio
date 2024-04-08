@@ -14,6 +14,7 @@ export const global = createGlobalTheme(":root", {
     large: "36px",
     medium: "28px",
     regular: "22px",
+    middleSmall: "18px",
     small: "16px",
     micro: "14px",
   },

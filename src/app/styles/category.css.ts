@@ -9,6 +9,16 @@ export const wrapper = style({
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
+  "@media": {
+    "screen and (min-width:1024px) and (max-width:1279px)": {
+      padding: 20,
+    },
+    "screen and (min-width:768px) and (max-width:1023px)": {},
+    "screen and (min-width:480px) and (max-width:767px)": {},
+    "screen and (max-width:479px)": {
+      padding: 20,
+    },
+  },
 });
 
 export const list_item = style({
@@ -19,6 +29,16 @@ export const list_item = style({
   ":hover": {
     cursor: "pointer",
     filter: "brightness(1.3)",
+  },
+  "@media": {
+    "screen and (min-width:1024px) and (max-width:1279px)": {
+      fontSize: vars.fontSize.middleSmall,
+    },
+    "screen and (min-width:768px) and (max-width:1023px)": {},
+    "screen and (min-width:480px) and (max-width:767px)": {},
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.small,
+    },
   },
 });
 

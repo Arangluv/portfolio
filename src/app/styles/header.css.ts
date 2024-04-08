@@ -22,4 +22,10 @@ export const icon = style({
     opacity: 1,
     cursor: "pointer",
   },
+  "@media": {
+    "screen and (max-width:479px)": {
+      width: 20,
+      height: 20,
+    },
+  },
 });

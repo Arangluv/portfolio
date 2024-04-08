@@ -36,6 +36,7 @@ export const main_wrapper = style({
   "@media": {
     "screen and (max-width:479px)": {
       // 모바일
+      gridTemplateColumns: "1fr 1fr",
       gridTemplateRows: "20fr 1fr 1fr 1fr",
       gap: 5,
     },
@@ -151,6 +152,24 @@ export const top_left_category_corner = style({
   transition: "all 3s ease-in-out",
   zIndex: -1,
   background: `linear-gradient(135deg, ${vars.themeColor.color.gradient_start} 0%, ${vars.themeColor.color.gradient_end} 50%, ${vars.themeColor.color.gradient_end} 100%)`,
+  "@media": {
+    "screen and (min-width:1024px) and (max-width:1279px)": {
+      width: 80,
+      height: 80,
+      top: -3,
+      left: -3,
+    },
+    "screen and (min-width:768px) and (max-width:1023px)": {
+      
+    },
+    "screen and (min-width:480px) and (max-width:767px)": {},
+    "screen and (max-width:479px)": {
+      width: 50,
+      height: 50,
+      top: -3,
+      left: -3,
+    },
+  },
 });
 export const bottom_right_corner = style({
   position: "absolute",
