@@ -13,7 +13,8 @@ export const main_frame = style({
       height: "95vh",
     },
     "screen and (min-width:768px) and (max-width:1023px)": {
-      height: "95vh",
+      width: "100vw",
+      height: "100vh",
     },
     "screen and (min-width:480px) and (max-width:767px)": {
       height: "95vh",
@@ -34,6 +35,10 @@ export const main_wrapper = style({
   boxSizing: "border-box",
   gap: 20,
   "@media": {
+    "screen and (min-width:768px) and (max-width:1023px)": {
+      gridTemplateRows: "2fr 2fr 4fr 2fr",
+      gap: 10,
+    },
     "screen and (max-width:479px)": {
       // 모바일
       gridTemplateColumns: "1fr 1fr",
@@ -62,6 +67,7 @@ export const grid_item = style({
   alignItems: "center",
   justifyContent: "center",
   boxSizing: "border-box",
+
   color: vars.themeColor.color.mainFontColor,
 });
 export const grid_order_first = style({
@@ -129,7 +135,9 @@ export const category_title = style({
       // 테블릿 가로 & 노트북
       fontSize: vars.fontSize.regular,
     },
-
+    "screen and (min-width:768px) and (max-width:1023px)": {
+      fontSize: vars.fontSize.middleSmall,
+    },
     "screen and (max-width:479px)": {
       // 모바일 세로
       fontSize: vars.fontSize.regular,
@@ -160,9 +168,11 @@ export const top_left_category_corner = style({
       left: -3,
     },
     "screen and (min-width:768px) and (max-width:1023px)": {
-      
+      width: 80,
+      height: 80,
+      top: -3,
+      left: -3,
     },
-    "screen and (min-width:480px) and (max-width:767px)": {},
     "screen and (max-width:479px)": {
       width: 50,
       height: 50,

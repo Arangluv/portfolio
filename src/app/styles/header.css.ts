@@ -27,5 +27,9 @@ export const icon = style({
       width: 20,
       height: 20,
     },
+    "screen and (min-width:768px) and (max-width:1023px)": {
+      width: 20,
+      height: 20,
+    },
   },
 });

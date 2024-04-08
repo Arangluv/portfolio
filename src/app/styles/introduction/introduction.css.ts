@@ -6,14 +6,19 @@ export const intro_wrapper = style({
   height: "50vh",
   display: "flex",
   flexDirection: "column",
-  justifyContent: "center",
   alignItems: "center",
+  boxSizing: "border-box",
   padding: 40,
   paddingRight: 250,
   "@media": {
     "screen and (min-width:1024px) and (max-width:1279px)": {
       // 테블릿 가로 & 노트북
       paddingRight: 50,
+    },
+    "screen and (min-width:768px) and (max-width:1023px)": {
+      padding: "0px 0px",
+      paddingRight: 20,
+      height: "100%",
     },
     "screen and (max-width:479px)": {
       // 모바일
@@ -34,6 +39,10 @@ export const main_title = style({
       // 테블릿 가로 & 노트북
       fontSize: vars.fontSize.large,
     },
+    "screen and (min-width:768px) and (max-width:1023px)": {
+      fontSize: vars.fontSize.large,
+      marginBottom: 20,
+    },
     "screen and (max-width:479px)": {
       // 모바일
       fontSize: vars.fontSize.large,
@@ -53,10 +62,14 @@ export const sub_title = style([
         // 테블릿 가로 & 노트북
         fontSize: vars.fontSize.small,
       },
+      "screen and (min-width:768px) and (max-width:1023px)": {
+        fontSize: vars.fontSize.regular,
+        marginBottom: 30,
+      },
       "screen and (max-width:479px)": {
         // 모바일
         fontSize: vars.fontSize.micro,
-        marginBottom: 0,
+        marginBottom: 20,
       },
     },
   },
@@ -74,6 +87,14 @@ export const paragraph_wrapper = style({
     background: `linear-gradient(to bottom, ${vars.themeColor.color.gradient_start} 0%, ${vars.themeColor.color.gradient_end} 100%)`,
     transition: "background 5s ease-out",
   },
+  "@media": {
+    "screen and (min-width:768px) and (max-width:1023px)": {
+      paddingLeft: 10,
+    },
+    "screen and (max-width:479px)": {
+      paddingLeft: 5,
+    },
+  },
 });
 export const paragraph = style({
   lineHeight: 1.6,
@@ -85,8 +106,11 @@ export const paragraph = style({
       // 테블릿 가로 & 노트북
       fontSize: vars.fontSize.small,
     },
+    "screen and (min-width:768px) and (max-width:1023px)": {
+      fontSize: vars.fontSize.small,
+    },
     "screen and (max-width:479px)": {
-      display: "none",
+      fontSize: vars.fontSize.micro,
     },
   },
 });
