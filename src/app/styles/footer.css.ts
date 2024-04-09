@@ -31,9 +31,11 @@ export const text = style({
   "@media": {
     "screen and (min-width:768px) and (max-width:1023px)": {
       marginBottom: 10,
+      fontSize: 12,
     },
     "screen and (max-width:479px)": {
       marginBottom: 10,
+      fontSize: 12,
     },
   },
 });
