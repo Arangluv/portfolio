@@ -119,8 +119,8 @@ export const picture_wrapper_item = style([
   {
     position: "relative",
     overflow: "hidden",
-    width: imageContentWidth,
-    height: imageContentHeight,
+    width: "100%",
+    height: "100%",
     "@media": {
       "screen and (min-width:1024px) and (max-width:1279px)": {},
       "screen and (min-width:768px) and (max-width:1023px)": {},

@@ -18,6 +18,10 @@ const ProjectContent = ({ contentWidth, contentHeight }: ContentStyleInfo) => {
   const [sliderCount, setSliderCount] = useState(0); // 처음 0, 마지막은 동적으로 변한다.
   const imageWrapperRef = useRef<HTMLDivElement>(null);
   const imageSliderRef = useRef<HTMLDivElement>(null);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
   const [contentStyleInfo, setContentStyleInfo] =
     useState<ImageContentStyleInfo>({
       imageContentWidth: 0,
@@ -26,11 +30,15 @@ const ProjectContent = ({ contentWidth, contentHeight }: ContentStyleInfo) => {
 
   useEffect(() => {
     setMounted(true);
+    window.addEventListener("resize", handleResize);
     setContentStyleInfo({
       imageContentWidth: imageWrapperRef.current?.offsetWidth,
       imageContentHeight: imageWrapperRef.current?.offsetHeight,
     });
-  }, [mounted]);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [mounted, windowWidth]);
 
   if (!mounted) return <div></div>;
 

@@ -14,18 +14,25 @@ const Project = () => {
   const [sliderCount, setSliderCount] = useState(0); // 처음 0, 마지막은 동적으로 변한다.
   const mainContentRef = useRef<HTMLDivElement>(null);
   const sliderContentRef = useRef<HTMLDivElement>(null);
-
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
   const [contentStyleInfo, setContentStyleInfo] = useState<ContentStyleInfo>({
     contentWidth: 0,
     contentHeight: 0,
   });
   useEffect(() => {
     setMounted(true);
+    window.addEventListener("resize", handleResize);
     setContentStyleInfo({
       contentWidth: mainContentRef.current?.offsetWidth,
       contentHeight: mainContentRef.current?.offsetHeight,
     });
-  }, [mounted]);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [mounted, windowWidth]);
 
   const handleClick = (direction: string) => {
     if (!sliderContentRef.current) return;
