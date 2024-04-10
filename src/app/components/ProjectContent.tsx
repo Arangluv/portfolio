@@ -33,14 +33,7 @@ const ProjectContent = ({ contentWidth, contentHeight }: ContentStyleInfo) => {
   }, [mounted]);
 
   if (!mounted) return <div></div>;
-  // style={assignInlineVars({
-  //   [style.imageContentWidth]: contentStyleInfo.imageContentWidth
-  //     ? `${contentStyleInfo.imageContentWidth}px`
-  //     : "0px",
-  //   [style.imageContentHeight]: contentStyleInfo.imageContentHeight
-  //     ? `${contentStyleInfo.imageContentHeight}px`
-  //     : "0px",
-  // })}
+
   const handleClick = (direction: string) => {
     if (!imageSliderRef.current) return;
 

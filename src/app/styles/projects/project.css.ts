@@ -14,6 +14,12 @@ export const project_wrapper = style({
   backgroundColor: vars.themeColor.color.contentBackGround,
   gap: 10,
   boxSizing: "border-box",
+  "@media": {
+    "screen and (min-width:1024px) and (max-width:1279px)": {},
+    "screen and (min-width:768px) and (max-width:1023px)": {},
+    "screen and (min-width:480px) and (max-width:767px)": {},
+    "screen and (max-width:479px)": {},
+  },
 });
 
 export const grid_item = style({
@@ -46,7 +52,18 @@ export const main_content_wrapper = style({
   gridColumn: "2 / 3",
   gridTemplateColumns: "1fr 1fr",
   gridTemplateRows: "2fr 20fr",
-  gap: 20,
+  gap: 10,
+  "@media": {
+    "screen and (min-width:1024px) and (max-width:1279px)": {},
+    "screen and (min-width:768px) and (max-width:1023px)": {
+      gap: 5,
+    },
+    "screen and (min-width:480px) and (max-width:767px)": {},
+    "screen and (max-width:479px)": {
+      gridTemplateColumns: "none",
+      gridTemplateRows: "1fr 4.5fr 4.5fr",
+    },
+  },
 });
 export const header_item = style([
   grid_item,
@@ -58,6 +75,19 @@ export const header_item = style([
     justifyContent: "center",
     fontSize: vars.fontSize.medium,
     fontWeight: vars.fontWeight.large,
+    "@media": {
+      "screen and (min-width:1024px) and (max-width:1279px)": {
+        fontSize: vars.fontSize.regular,
+      },
+      "screen and (min-width:768px) and (max-width:1023px)": {
+        fontSize: vars.fontSize.small,
+      },
+      "screen and (min-width:480px) and (max-width:767px)": {},
+      "screen and (max-width:479px)": {
+        fontSize: vars.fontSize.small,
+        gridColumn: "auto",
+      },
+    },
   },
 ]);
 export const slider_wrapper = style({
@@ -91,6 +121,12 @@ export const picture_wrapper_item = style([
     overflow: "hidden",
     width: imageContentWidth,
     height: imageContentHeight,
+    "@media": {
+      "screen and (min-width:1024px) and (max-width:1279px)": {},
+      "screen and (min-width:768px) and (max-width:1023px)": {},
+      "screen and (min-width:480px) and (max-width:767px)": {},
+      "screen and (max-width:479px)": {},
+    },
   },
 ]);
 
@@ -105,6 +141,7 @@ export const introduction_item = style([
 export const progress_state_item = style([
   grid_item,
   {
+    padding: "5px 0",
     gridColumn: "2 / 3",
     gridRow: "2 / 3",
   },
@@ -119,6 +156,12 @@ export const btn_icon = style({
   ":hover": {
     cursor: "pointer",
     filter: "brightness(1.2)",
+  },
+  "@media": {
+    "screen and (max-width:479px)": {
+      width: 30,
+      height: 30,
+    },
   },
 });
 export const unable_icon = style({
@@ -161,10 +204,27 @@ export const image_slider_btn_wrapper = style({
   width: 200,
   height: 40,
   borderRadius: 30,
-
   bottom: 5,
   left: "50%",
   transform: "translateX(-50%)",
+  "@media": {
+    "screen and (min-width:1024px) and (max-width:1279px)": {
+      fontSize: vars.fontSize.micro,
+      width: 150,
+      height: 30,
+    },
+    "screen and (min-width:768px) and (max-width:1023px)": {
+      fontSize: vars.fontSize.micro,
+      width: 150,
+      height: 30,
+    },
+    "screen and (min-width:480px) and (max-width:767px)": {},
+    "screen and (max-width:479px)": {
+      fontSize: vars.fontSize.micro,
+      width: 150,
+      height: 30,
+    },
+  },
 });
 
 export const image_slider_btn_item = style({
@@ -230,6 +290,21 @@ export const project_introduction_wrapper = style({
   boxSizing: "border-box",
   display: "flex",
   flexDirection: "column",
+  overflow: "auto",
+  "::-webkit-scrollbar": {
+    height: "100%",
+    width: 3,
+    backgroundColor: vars.themeColor.color.mainBackGround,
+  },
+  "::-webkit-scrollbar-thumb": {
+    backgroundColor: vars.themeColor.color.mainFontColor,
+  },
+  "@media": {
+    "screen and (min-width:1024px) and (max-width:1279px)": {},
+    "screen and (min-width:768px) and (max-width:1023px)": {},
+    "screen and (min-width:480px) and (max-width:767px)": {},
+    "screen and (max-width:479px)": {},
+  },
 });
 
 export const introduction_sub_wrapper = style({
@@ -237,6 +312,18 @@ export const introduction_sub_wrapper = style({
   gridTemplateColumns: "2.5fr 8fr",
   marginBottom: 15,
   gap: 10,
+  "@media": {
+    "screen and (min-width:1024px) and (max-width:1279px)": {
+      gridTemplateColumns: "none",
+      gridTemplateRows: "repeat(2, auto)",
+      height: imageContentHeight,
+    },
+    "screen and (min-width:768px) and (max-width:1023px)": {
+      gridTemplateRows: "repeat(2, auto)",
+    },
+    "screen and (min-width:480px) and (max-width:767px)": {},
+    "screen and (max-width:479px)": {},
+  },
 });
 
 export const seperated_wrapper = style([
@@ -247,18 +334,43 @@ export const seperated_wrapper = style([
   },
 ]);
 
-export const introduction_front = style({});
+export const introduction_front = style({
+  "@media": {
+    "screen and (min-width:1024px) and (max-width:1279px)": {},
+    "screen and (min-width:768px) and (max-width:1023px)": {
+      width: "100%",
+    },
+    "screen and (min-width:480px) and (max-width:767px)": {},
+    "screen and (max-width:479px)": {},
+  },
+});
 export const introduction_rear = style({
   overflow: "hidden",
 });
 export const intro_sub_title = style({
   lineHeight: "1.6",
   opacity: 0.8,
+  "@media": {
+    "screen and (min-width:1024px) and (max-width:1279px)": {},
+    "screen and (min-width:768px) and (max-width:1023px)": {
+      fontSize: vars.fontSize.micro,
+    },
+    "screen and (min-width:480px) and (max-width:767px)": {},
+    "screen and (max-width:479px)": {},
+  },
 });
 export const intro_sub_title_accent = style({
   lineHeight: "1.6",
   color: "rgb(226,232,240)",
   fontWeight: vars.fontWeight.large,
+  "@media": {
+    "screen and (min-width:1024px) and (max-width:1279px)": {},
+    "screen and (min-width:768px) and (max-width:1023px)": {
+      fontSize: vars.fontSize.micro,
+    },
+    "screen and (min-width:480px) and (max-width:767px)": {},
+    "screen and (max-width:479px)": {},
+  },
 });
 export const intro_description = style({
   width: "100%",
@@ -266,6 +378,14 @@ export const intro_description = style({
   whiteSpace: "pre-line",
   lineHeight: "1.6",
   display: "flex",
+  "@media": {
+    "screen and (min-width:1024px) and (max-width:1279px)": {},
+    "screen and (min-width:768px) and (max-width:1023px)": {
+      fontSize: vars.fontSize.micro,
+    },
+    "screen and (min-width:480px) and (max-width:767px)": {},
+    "screen and (max-width:479px)": {},
+  },
 });
 
 export const intro_description_link = style([
