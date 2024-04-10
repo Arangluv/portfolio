@@ -37,7 +37,6 @@ export const archive_item_container = style({
       width: "80%",
       height: "90%",
     },
-    "screen and (min-width:480px) and (max-width:767px)": {},
     "screen and (max-width:479px)": {
       width: "80%",
       height: "80%",
@@ -76,7 +75,6 @@ export const icon = style({
       width: 50,
       height: 50,
     },
-    "screen and (min-width:480px) and (max-width:767px)": {},
     "screen and (max-width:479px)": {
       width: 40,
       height: 40,
@@ -95,7 +93,6 @@ export const archive_title = style({
       fontSize: vars.fontSize.regular,
       marginTop: 20,
     },
-    "screen and (min-width:480px) and (max-width:767px)": {},
     "screen and (max-width:479px)": {
       margin: "10px 0",
       fontSize: vars.fontSize.middleSmall,
@@ -110,11 +107,9 @@ export const description_box = style([
     marginTop: 60,
     padding: "0 10px",
     "@media": {
-      "screen and (min-width:1024px) and (max-width:1279px)": {},
       "screen and (min-width:768px) and (max-width:1023px)": {
         marginTop: 30,
       },
-      "screen and (min-width:480px) and (max-width:767px)": {},
       "screen and (max-width:479px)": {
         marginTop: 10,
       },
@@ -127,11 +122,9 @@ export const archive_description = style([
   {
     marginBottom: 5,
     "@media": {
-      "screen and (min-width:1024px) and (max-width:1279px)": {},
       "screen and (min-width:768px) and (max-width:1023px)": {
         fontSize: vars.fontSize.micro,
       },
-      "screen and (min-width:480px) and (max-width:767px)": {},
       "screen and (max-width:479px)": {
         fontSize: vars.fontSize.micro,
       },
@@ -163,7 +156,6 @@ export const read_more = style({
       bottom: 10,
       padding: "10px 20px",
     },
-    "screen and (min-width:480px) and (max-width:767px)": {},
     "screen and (max-width:479px)": {
       bottom: 10,
       padding: "10px 10px",
@@ -186,7 +178,6 @@ export const read_more_text = style({
     "screen and (min-width:768px) and (max-width:1023px)": {
       fontSize: vars.fontSize.small,
     },
-    "screen and (min-width:480px) and (max-width:767px)": {},
     "screen and (max-width:479px)": {
       fontSize: vars.fontSize.small,
     },
