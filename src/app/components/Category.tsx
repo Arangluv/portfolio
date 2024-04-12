@@ -7,7 +7,7 @@ const Category = () => {
   const [mounted, setMounted] = useState(false);
   const { setTheme, theme } = useTheme();
   useEffect(() => setMounted(true), []);
-  if (!mounted) return <div>아아아아아</div>;
+  if (!mounted) return <div></div>;
 
   return (
     <ul className={style.wrapper}>

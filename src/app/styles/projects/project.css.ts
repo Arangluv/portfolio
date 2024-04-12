@@ -14,12 +14,6 @@ export const project_wrapper = style({
   backgroundColor: vars.themeColor.color.contentBackGround,
   gap: 10,
   boxSizing: "border-box",
-  "@media": {
-    "screen and (min-width:1024px) and (max-width:1279px)": {},
-    "screen and (min-width:768px) and (max-width:1023px)": {},
-    "screen and (min-width:480px) and (max-width:767px)": {},
-    "screen and (max-width:479px)": {},
-  },
 });
 
 export const grid_item = style({
@@ -54,11 +48,9 @@ export const main_content_wrapper = style({
   gridTemplateRows: "2fr 20fr",
   gap: 10,
   "@media": {
-    "screen and (min-width:1024px) and (max-width:1279px)": {},
     "screen and (min-width:768px) and (max-width:1023px)": {
       gap: 5,
     },
-    "screen and (min-width:480px) and (max-width:767px)": {},
     "screen and (max-width:479px)": {
       gridTemplateColumns: "none",
       gridTemplateRows: "1fr 4.5fr 4.5fr",
@@ -82,7 +74,6 @@ export const header_item = style([
       "screen and (min-width:768px) and (max-width:1023px)": {
         fontSize: vars.fontSize.small,
       },
-      "screen and (min-width:480px) and (max-width:767px)": {},
       "screen and (max-width:479px)": {
         fontSize: vars.fontSize.small,
         gridColumn: "auto",
@@ -121,12 +112,6 @@ export const picture_wrapper_item = style([
     overflow: "hidden",
     width: "100%",
     height: "100%",
-    "@media": {
-      "screen and (min-width:1024px) and (max-width:1279px)": {},
-      "screen and (min-width:768px) and (max-width:1023px)": {},
-      "screen and (min-width:480px) and (max-width:767px)": {},
-      "screen and (max-width:479px)": {},
-    },
   },
 ]);
 
@@ -218,7 +203,6 @@ export const image_slider_btn_wrapper = style({
       width: 150,
       height: 30,
     },
-    "screen and (min-width:480px) and (max-width:767px)": {},
     "screen and (max-width:479px)": {
       fontSize: vars.fontSize.micro,
       width: 150,
@@ -299,12 +283,6 @@ export const project_introduction_wrapper = style({
   "::-webkit-scrollbar-thumb": {
     backgroundColor: vars.themeColor.color.mainFontColor,
   },
-  "@media": {
-    "screen and (min-width:1024px) and (max-width:1279px)": {},
-    "screen and (min-width:768px) and (max-width:1023px)": {},
-    "screen and (min-width:480px) and (max-width:767px)": {},
-    "screen and (max-width:479px)": {},
-  },
 });
 
 export const introduction_sub_wrapper = style({
@@ -321,8 +299,6 @@ export const introduction_sub_wrapper = style({
     "screen and (min-width:768px) and (max-width:1023px)": {
       gridTemplateRows: "repeat(2, auto)",
     },
-    "screen and (min-width:480px) and (max-width:767px)": {},
-    "screen and (max-width:479px)": {},
   },
 });
 
@@ -336,12 +312,9 @@ export const seperated_wrapper = style([
 
 export const introduction_front = style({
   "@media": {
-    "screen and (min-width:1024px) and (max-width:1279px)": {},
     "screen and (min-width:768px) and (max-width:1023px)": {
       width: "100%",
     },
-    "screen and (min-width:480px) and (max-width:767px)": {},
-    "screen and (max-width:479px)": {},
   },
 });
 export const introduction_rear = style({
@@ -351,12 +324,9 @@ export const intro_sub_title = style({
   lineHeight: "1.6",
   opacity: 0.8,
   "@media": {
-    "screen and (min-width:1024px) and (max-width:1279px)": {},
     "screen and (min-width:768px) and (max-width:1023px)": {
       fontSize: vars.fontSize.micro,
     },
-    "screen and (min-width:480px) and (max-width:767px)": {},
-    "screen and (max-width:479px)": {},
   },
 });
 export const intro_sub_title_accent = style({
@@ -364,12 +334,9 @@ export const intro_sub_title_accent = style({
   color: "rgb(226,232,240)",
   fontWeight: vars.fontWeight.large,
   "@media": {
-    "screen and (min-width:1024px) and (max-width:1279px)": {},
     "screen and (min-width:768px) and (max-width:1023px)": {
       fontSize: vars.fontSize.micro,
     },
-    "screen and (min-width:480px) and (max-width:767px)": {},
-    "screen and (max-width:479px)": {},
   },
 });
 export const intro_description = style({
@@ -379,12 +346,9 @@ export const intro_description = style({
   lineHeight: "1.6",
   display: "flex",
   "@media": {
-    "screen and (min-width:1024px) and (max-width:1279px)": {},
     "screen and (min-width:768px) and (max-width:1023px)": {
       fontSize: vars.fontSize.micro,
     },
-    "screen and (min-width:480px) and (max-width:767px)": {},
-    "screen and (max-width:479px)": {},
   },
 });
 
@@ -410,4 +374,10 @@ export const skill_text = style({
   color: vars.themeColor.color.mainBackGround,
   fontSize: vars.fontSize.small,
   fontWeight: vars.fontWeight.large,
+});
+
+export const loading_container = style({
+  backgroundColor: vars.themeColor.color.contentBackGround,
+  width: "100%",
+  height: "100%",
 });

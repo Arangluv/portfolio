@@ -8,8 +8,6 @@ import Header from "./components/Header";
 import Category from "./components/Category";
 import Footer from "./components/Footer";
 import CornerBottomRight from "./components/ConnerBottomRight";
-// import { Inter } from "next/font/google";
-// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "류현수's Portfolio",

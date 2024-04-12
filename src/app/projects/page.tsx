@@ -14,7 +14,7 @@ const Project = () => {
   const [sliderCount, setSliderCount] = useState(0); // 처음 0, 마지막은 동적으로 변한다.
   const mainContentRef = useRef<HTMLDivElement>(null);
   const sliderContentRef = useRef<HTMLDivElement>(null);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState<null | number>(null);
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
   };
