@@ -3,10 +3,28 @@ import * as style from "../styles/category.css";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 const Category = () => {
   const [mounted, setMounted] = useState(false);
-  const { setTheme, theme } = useTheme();
-  useEffect(() => setMounted(true), []);
+  const { setTheme } = useTheme();
+  const pathname = usePathname();
+  useEffect(() => {
+    if (pathname === "/") {
+      setTheme("dark_1");
+    }
+    if (pathname === "/skills") {
+      setTheme("dark_2");
+    }
+    if (pathname === "/projects") {
+      setTheme("dark_3");
+    }
+    if (pathname === "/archives") {
+      setTheme("dark_4");
+    }
+  }, []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   if (!mounted) return <div></div>;
 
   return (

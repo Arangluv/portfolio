@@ -380,4 +380,9 @@ export const loading_container = style({
   backgroundColor: vars.themeColor.color.contentBackGround,
   width: "100%",
   height: "100%",
+  display: "grid",
+  gridTemplateColumns: "1fr 20fr 1fr",
+  gridTemplateRows: "20fr 1fr",
+  gap: 10,
+  boxSizing: "border-box",
 });
