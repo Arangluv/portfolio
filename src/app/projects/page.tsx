@@ -74,6 +74,8 @@ const Project = () => {
           {projectData.map((data, idx) => {
             return (
               <ProjectContent
+                title={data.title}
+                images={data.images}
                 contentWidth={contentStyleInfo.contentWidth}
                 contentHeight={contentStyleInfo.contentHeight}
                 key={idx}

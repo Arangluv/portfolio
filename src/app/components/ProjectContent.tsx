@@ -7,6 +7,8 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 interface ContentStyleInfo {
   children: React.ReactNode;
+  title: string;
+  images: string[];
   contentWidth: number | undefined;
   contentHeight: number | undefined;
 }
@@ -16,6 +18,8 @@ interface ImageContentStyleInfo {
 }
 const ProjectContent = ({
   children,
+  title,
+  images,
   contentWidth,
   contentHeight,
 }: ContentStyleInfo) => {
@@ -23,6 +27,7 @@ const ProjectContent = ({
   const [sliderCount, setSliderCount] = useState(0); // 처음 0, 마지막은 동적으로 변한다.
   const imageWrapperRef = useRef<HTMLDivElement>(null);
   const imageSliderRef = useRef<HTMLDivElement>(null);
+  const MAX_COUNT = images.length;
   const [windowWidth, setWindowWidth] = useState<null | number>(null);
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
@@ -58,7 +63,7 @@ const ProjectContent = ({
       imageSliderRef.current.style.transform = `translateX(-${calculateMovePixel}px)`;
       setSliderCount((pre) => pre - 1);
     }
-    if (direction === "right" && sliderCount !== 7) {
+    if (direction === "right" && sliderCount !== MAX_COUNT - 1) {
       const calculateMovePixel = contentStyleInfo.imageContentWidth
         ? contentStyleInfo.imageContentWidth * (sliderCount + 1)
         : 0;
@@ -76,7 +81,7 @@ const ProjectContent = ({
           : "0px",
       })}
     >
-      <div className={style.header_item}>AQUIZ - 나만의 퀴즈사이트</div>
+      <div className={style.header_item}>{title}</div>
       <div
         ref={imageWrapperRef}
         className={style.picture_wrapper_item}
@@ -86,14 +91,18 @@ const ProjectContent = ({
         })}
       >
         <div ref={imageSliderRef} className={style.image_slider_moveable}>
-          <Image
-            width={500}
-            height={600}
-            alt="project content image"
-            src="https://i.stack.imgur.com/LUm4a.png"
-            className={style.image_size}
-            priority={true}
-          />
+          {images.map((image) => {
+            return (
+              <Image
+                width={500}
+                height={600}
+                alt="project content image"
+                src={image}
+                className={style.image_size}
+                priority={true}
+              />
+            );
+          })}
         </div>
         <div className={style.image_slider_btn_wrapper}>
           <div className={style.image_slider_prev_item}>
@@ -106,13 +115,15 @@ const ProjectContent = ({
           </div>
           <div className={style.image_slider_btn_item}>
             <span className={style.image_count_text}>
-              {sliderCount + 1} / 8
+              {sliderCount + 1} / {MAX_COUNT}
             </span>
           </div>
           <div className={style.image_slider_next_item}>
             <MdOutlineNavigateNext
               className={
-                sliderCount === 7 ? style.image_icon_disable : style.image_icon
+                sliderCount === MAX_COUNT
+                  ? style.image_icon_disable
+                  : style.image_icon
               }
               onClick={() => handleClick("right")}
             />
