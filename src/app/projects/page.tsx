@@ -71,11 +71,12 @@ const Project = () => {
       </div>
       <div ref={mainContentRef} className={style.slider_wrapper}>
         <div className={style.slider_moveable} ref={sliderContentRef}>
-          {projectData.map((data) => {
+          {projectData.map((data, idx) => {
             return (
               <ProjectContent
                 contentWidth={contentStyleInfo.contentWidth}
                 contentHeight={contentStyleInfo.contentHeight}
+                key={idx}
               >
                 <ProjectDescription
                   period={data.period}
@@ -100,27 +101,17 @@ const Project = () => {
         />
       </div>
       <div className={style.progress_state_item}>
-        <div
-          className={
-            sliderCount === 0
-              ? style.progressiv_dot_active
-              : style.progressiv_dot_inactive
-          }
-        ></div>
-        <div
-          className={
-            sliderCount === 1
-              ? style.progressiv_dot_active
-              : style.progressiv_dot_inactive
-          }
-        ></div>
-        <div
-          className={
-            sliderCount === 2
-              ? style.progressiv_dot_active
-              : style.progressiv_dot_inactive
-          }
-        ></div>
+        {projectData.map((item, idx) => {
+          return (
+            <div
+              className={
+                sliderCount === idx
+                  ? style.progressiv_dot_active
+                  : style.progressiv_dot_inactive
+              }
+            ></div>
+          );
+        })}
       </div>
     </div>
   );
