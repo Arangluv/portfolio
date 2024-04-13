@@ -5,8 +5,8 @@ import { assignInlineVars } from "@vanilla-extract/dynamic";
 import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from "react-icons/md";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import ProjectDescription from "./ProjectDescription";
 interface ContentStyleInfo {
+  children: React.ReactNode;
   contentWidth: number | undefined;
   contentHeight: number | undefined;
 }
@@ -14,7 +14,11 @@ interface ImageContentStyleInfo {
   imageContentWidth: number | undefined;
   imageContentHeight: number | undefined;
 }
-const ProjectContent = ({ contentWidth, contentHeight }: ContentStyleInfo) => {
+const ProjectContent = ({
+  children,
+  contentWidth,
+  contentHeight,
+}: ContentStyleInfo) => {
   const [mounted, setMounted] = useState(false);
   const [sliderCount, setSliderCount] = useState(0); // 처음 0, 마지막은 동적으로 변한다.
   const imageWrapperRef = useRef<HTMLDivElement>(null);
@@ -115,7 +119,7 @@ const ProjectContent = ({ contentWidth, contentHeight }: ContentStyleInfo) => {
           </div>
         </div>
       </div>
-      <ProjectDescription />
+      {children}
     </div>
   );
 };

@@ -4,6 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import * as style from "../styles/projects/project.css";
 import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from "react-icons/md";
 import ProjectContent from "../components/ProjectContent";
+import projectData from "../assets/projectData";
+import ProjectDescription from "../components/ProjectDescription";
+
 interface ContentStyleInfo {
   contentWidth: number | undefined;
   contentHeight: number | undefined;
@@ -12,6 +15,7 @@ interface ContentStyleInfo {
 const Project = () => {
   const [mounted, setMounted] = useState(false);
   const [sliderCount, setSliderCount] = useState(0); // 처음 0, 마지막은 동적으로 변한다.
+  const MAX_COUNT = projectData.length;
   const mainContentRef = useRef<HTMLDivElement>(null);
   const sliderContentRef = useRef<HTMLDivElement>(null);
   const [windowWidth, setWindowWidth] = useState<null | number>(null);
@@ -45,7 +49,7 @@ const Project = () => {
       sliderContentRef.current.style.transform = `translateX(-${calculateMovePixel}px)`;
       setSliderCount((pre) => pre - 1);
     }
-    if (direction === "right" && sliderCount !== 2) {
+    if (direction === "right" && sliderCount !== MAX_COUNT - 1) {
       const calculateMovePixel = contentStyleInfo.contentWidth
         ? contentStyleInfo.contentWidth * (sliderCount + 1)
         : 0;
@@ -67,26 +71,24 @@ const Project = () => {
       </div>
       <div ref={mainContentRef} className={style.slider_wrapper}>
         <div className={style.slider_moveable} ref={sliderContentRef}>
-          <ProjectContent
-            contentWidth={contentStyleInfo.contentWidth}
-            contentHeight={contentStyleInfo.contentHeight}
-          />
-          <ProjectContent
-            contentWidth={contentStyleInfo.contentWidth}
-            contentHeight={contentStyleInfo.contentHeight}
-          />
-          <ProjectContent
-            contentWidth={contentStyleInfo.contentWidth}
-            contentHeight={contentStyleInfo.contentHeight}
-          />
-          <ProjectContent
-            contentWidth={contentStyleInfo.contentWidth}
-            contentHeight={contentStyleInfo.contentHeight}
-          />
-          <ProjectContent
-            contentWidth={contentStyleInfo.contentWidth}
-            contentHeight={contentStyleInfo.contentHeight}
-          />
+          {projectData.map((data) => {
+            return (
+              <ProjectContent
+                contentWidth={contentStyleInfo.contentWidth}
+                contentHeight={contentStyleInfo.contentHeight}
+              >
+                <ProjectDescription
+                  period={data.period}
+                  overview={data.overview}
+                  functions={data.functions}
+                  github={data.github}
+                  frontend={data.frontend}
+                  backend={data.backend}
+                  deployment={data.deployment}
+                />
+              </ProjectContent>
+            );
+          })}
         </div>
       </div>
       <div className={style.next_btn_item}>
