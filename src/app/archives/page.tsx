@@ -16,20 +16,23 @@ const Archiving = () => {
 
           <div className={style.description_box}>
             <span className={style.archive_description}>
-              <FaCheck className={style.archive_icon} />
-              소스 코드를 틈틈히 저장해두었습니다
+              <div className={style.archive_icon_container}>
+                <FaCheck className={style.archive_icon} />
+              </div>
+              <span>과거 및 현재 프로젝트의 소스코드를 저장</span>
             </span>
             <span className={style.archive_description}>
-              <FaCheck className={style.archive_icon} />
-              과거 / 현재 프로젝트 코드 저장소 입니다
-            </span>
-            <span className={style.archive_description}>
-              <FaCheck className={style.archive_icon} />
-              혼자서 코딩 연습을 위해 끄적이던 소스 코드
+              <div className={style.archive_icon_container}>
+                <FaCheck className={style.archive_icon} />
+              </div>
+              <span>공부를 진행하며 적어둔 코드 저장</span>
             </span>
           </div>
           <div className={style.read_more}>
-            <a href="#" className={style.read_more_text}>
+            <a
+              href="https://github.com/Arangluv"
+              className={style.read_more_text}
+            >
               READ MORE
             </a>
           </div>
@@ -45,20 +48,29 @@ const Archiving = () => {
 
           <div className={style.description_box}>
             <span className={style.archive_description}>
-              <FaCheck className={style.archive_icon} />
-              소스 코드를 틈틈히 저장해두었습니다
+              <div className={style.archive_icon_container}>
+                <FaCheck className={style.archive_icon} />
+              </div>
+              <span>프로젝트를 진행하면서 배운 부분을 기록</span>
             </span>
             <span className={style.archive_description}>
-              <FaCheck className={style.archive_icon} />
-              과거 / 현재 프로젝트 코드 저장소 입니다
+              <div className={style.archive_icon_container}>
+                <FaCheck className={style.archive_icon} />
+              </div>
+              <span>찾아본 것을 다시 찾아보는 것을 방지하기 위한 정리</span>
             </span>
             <span className={style.archive_description}>
-              <FaCheck className={style.archive_icon} />
-              혼자서 코딩 연습을 위해 끄적이던 소스 코드
+              <div className={style.archive_icon_container}>
+                <FaCheck className={style.archive_icon} />
+              </div>
+              <span>진짜 내 것으로 만들기 위해 정리</span>
             </span>
           </div>
           <div className={style.read_more}>
-            <a href="#" className={style.read_more_text}>
+            <a
+              href="https://observant-bite-62a.notion.site/Next-js-4464ac8b6b5e4c9eb4404255746b2316"
+              className={style.read_more_text}
+            >
               READ MORE
             </a>
           </div>
@@ -70,15 +82,3 @@ const Archiving = () => {
 };
 
 export default Archiving;
-{
-  /* <div>
-<span className={style.archive_description}>
-  혼자서 코딩 연습을 위해 끄적이던 소스 코드
-</span>
-</div>
-<div>
-<span className={style.archive_description}>
-  과거 프로젝트, 프로그램, 앱의 소스 코드
-</span>
-</div> */
-}

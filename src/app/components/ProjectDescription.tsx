@@ -19,7 +19,7 @@ const ProjectDescription = (props: DescriptionInfo) => {
         <div className={style.introduction_sub_wrapper}>
           <div className={style.introduction_front}>
             <span className={style.intro_sub_title}>
-              {period[0]} — {period[1]}
+              {period[0]} — &nbsp; {period[1]}
             </span>
           </div>
           <div className={style.introduction_rear}>

@@ -118,8 +118,9 @@ export const description_box = style([
 ]);
 export const archive_description = style([
   intro_description,
-  flex_box,
   {
+    display: "grid",
+    gridTemplateColumns: "1fr 9fr",
     marginBottom: 5,
     "@media": {
       "screen and (min-width:768px) and (max-width:1023px)": {
@@ -133,6 +134,11 @@ export const archive_description = style([
 ]);
 export const archive_icon = style({
   marginRight: 10,
+});
+export const archive_icon_container = style({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
 });
 export const read_more = style({
   position: "absolute",

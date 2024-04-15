@@ -234,8 +234,11 @@ export const image_slider_next_item = style([
   },
 ]);
 export const image_size = style({
-  width: imageContentWidth,
-  height: imageContentHeight,
+  // width: imageContentWidth,
+  // height: imageContentHeight,
+  width: "100%",
+  height: "100%",
+  objectFit: "contain",
 });
 export const image_icon = style([
   btn_icon,
