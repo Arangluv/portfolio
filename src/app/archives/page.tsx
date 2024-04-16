@@ -32,6 +32,7 @@ const Archiving = () => {
             <a
               href="https://github.com/Arangluv"
               className={style.read_more_text}
+              target="_blank"
             >
               READ MORE
             </a>
@@ -70,6 +71,7 @@ const Archiving = () => {
             <a
               href="https://observant-bite-62a.notion.site/Next-js-4464ac8b6b5e4c9eb4404255746b2316"
               className={style.read_more_text}
+              target="_blank"
             >
               READ MORE
             </a>

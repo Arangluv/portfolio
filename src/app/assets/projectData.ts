@@ -22,7 +22,7 @@ const projectData: ProjectData[] = [
     후술추가
     `,
     functions:
-      "외부 라이브러리 없이 carousel 구현, zero-runtime css를 지원하는 vanilla-extract로 반응형 웹앱 구현, next-images를 통한 이미지 최적화",
+      "외부 라이브러리 없이 carousel 구현, zero-runtime css를 지원하는 vanilla-extract로 반응형 웹앱 구현, next-images를 통한 이미지 최적화, next-themes를 활용한 multi themes 구현",
     github: "https://github.com/Arangluv/portfolio",
     frontend: ["next.js", "vanilla-extract"],
     backend: null,

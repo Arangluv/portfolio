@@ -91,7 +91,7 @@ const ProjectContent = ({
         })}
       >
         <div ref={imageSliderRef} className={style.image_slider_moveable}>
-          {images.map((image) => {
+          {images.map((image, idx) => {
             return (
               <Image
                 width={500}
@@ -100,6 +100,7 @@ const ProjectContent = ({
                 src={image}
                 className={style.image_size}
                 priority={true}
+                key={idx}
               />
             );
           })}
