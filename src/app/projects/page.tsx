@@ -88,6 +88,7 @@ const Project = () => {
                   frontend={data.frontend}
                   backend={data.backend}
                   deployment={data.deployment}
+                  key={idx}
                 />
               </ProjectContent>
             );
