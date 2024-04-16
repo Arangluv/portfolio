@@ -88,7 +88,6 @@ const Project = () => {
                   frontend={data.frontend}
                   backend={data.backend}
                   deployment={data.deployment}
-                  key={idx}
                 />
               </ProjectContent>
             );
@@ -107,6 +106,7 @@ const Project = () => {
         {projectData.map((item, idx) => {
           return (
             <div
+              key={idx}
               className={
                 sliderCount === idx
                   ? style.progressiv_dot_active
