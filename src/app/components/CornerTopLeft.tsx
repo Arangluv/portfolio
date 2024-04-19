@@ -1,4 +1,4 @@
-import * as style from "../styles/main.css";
+import * as style from '../styles/main.css';
 
 const CornerTopLeft = ({ className }: { className: string }) => {
   return (

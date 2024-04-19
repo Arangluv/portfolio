@@ -1,23 +1,23 @@
-import * as style from "../styles/skills/skills.css";
-import Html5Icon from "../assets/html5.svg";
-import CssIcon from "../assets/css3.svg";
-import JavascriptIcon from "../assets/javascript.svg";
-import ReactIcon from "../assets/react.svg";
-import NextJsIcon from "../assets/nextdotjs.svg";
-import TypeScriptIcon from "../assets/typescript.svg";
-import RecoilIcon from "../assets/recoil.svg";
-import ReactQueryIcon from "../assets/reactquery.svg";
-import ReactHookFormIcon from "../assets/reacthookform.svg";
-import StyledComponentsIcon from "../assets/styledcomponents.svg";
-import VanillaExtractIcon from "../assets/vanilla-extract.svg";
-import NodejsIcon from "../assets/nodedotjs.svg";
-import ExpressJsIcon from "../assets/express.svg";
-import MongoDBIcon from "../assets/mongodb.svg";
-import MongooseIcon from "../assets/mongoose.svg";
-import AwsIcon from "../assets/amazonaws.svg";
-import VercelIcon from "../assets/vercel.svg";
-import GitIcon from "../assets/git.svg";
-import GithubIcon from "../assets/github.svg";
+import * as style from '../styles/skills/skills.css';
+import Html5Icon from '../assets/html5.svg';
+import CssIcon from '../assets/css3.svg';
+import JavascriptIcon from '../assets/javascript.svg';
+import ReactIcon from '../assets/react.svg';
+import NextJsIcon from '../assets/nextdotjs.svg';
+import TypeScriptIcon from '../assets/typescript.svg';
+import RecoilIcon from '../assets/recoil.svg';
+import ReactQueryIcon from '../assets/reactquery.svg';
+import ReactHookFormIcon from '../assets/reacthookform.svg';
+import StyledComponentsIcon from '../assets/styledcomponents.svg';
+import VanillaExtractIcon from '../assets/vanilla-extract.svg';
+import NodejsIcon from '../assets/nodedotjs.svg';
+import ExpressJsIcon from '../assets/express.svg';
+import MongoDBIcon from '../assets/mongodb.svg';
+import MongooseIcon from '../assets/mongoose.svg';
+import AwsIcon from '../assets/amazonaws.svg';
+import VercelIcon from '../assets/vercel.svg';
+import GitIcon from '../assets/git.svg';
+import GithubIcon from '../assets/github.svg';
 const Skills = () => {
   return (
     <div className={style.wrapper}>

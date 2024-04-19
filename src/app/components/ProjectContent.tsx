@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import * as style from "../styles/projects/project.css";
-import { assignInlineVars } from "@vanilla-extract/dynamic";
-import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from "react-icons/md";
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import * as style from '../styles/projects/project.css';
+import { assignInlineVars } from '@vanilla-extract/dynamic';
+import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from 'react-icons/md';
+import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 interface ContentStyleInfo {
   children: React.ReactNode;
   title: string;
@@ -40,13 +40,13 @@ const ProjectContent = ({
 
   useEffect(() => {
     setMounted(true);
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     setContentStyleInfo({
       imageContentWidth: imageWrapperRef.current?.offsetWidth,
       imageContentHeight: imageWrapperRef.current?.offsetHeight,
     });
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, [mounted, windowWidth]);
 
@@ -55,30 +55,30 @@ const ProjectContent = ({
   const handleClick = (direction: string) => {
     if (!imageSliderRef.current) return;
 
-    if (direction === "left" && sliderCount !== 0) {
+    if (direction === 'left' && sliderCount !== 0) {
       // 이전 프로젝트를 보려고 하는 경우
       const calculateMovePixel = contentStyleInfo.imageContentWidth
         ? contentStyleInfo.imageContentWidth * (sliderCount - 1)
         : 0;
       imageSliderRef.current.style.transform = `translateX(-${calculateMovePixel}px)`;
-      setSliderCount((pre) => pre - 1);
+      setSliderCount(pre => pre - 1);
     }
-    if (direction === "right" && sliderCount !== MAX_COUNT - 1) {
+    if (direction === 'right' && sliderCount !== MAX_COUNT - 1) {
       const calculateMovePixel = contentStyleInfo.imageContentWidth
         ? contentStyleInfo.imageContentWidth * (sliderCount + 1)
         : 0;
       imageSliderRef.current.style.transform = `translateX(-${calculateMovePixel}px)`;
-      setSliderCount((pre) => pre + 1);
+      setSliderCount(pre => pre + 1);
     }
   };
   return (
     <div
       className={style.main_content_wrapper}
       style={assignInlineVars({
-        [style.totalContentWidth]: contentWidth ? `${contentWidth}px` : "0px",
+        [style.totalContentWidth]: contentWidth ? `${contentWidth}px` : '0px',
         [style.totalContentHeight]: contentHeight
           ? `${contentHeight}px`
-          : "0px",
+          : '0px',
       })}
     >
       <div className={style.header_item}>{title}</div>
@@ -111,7 +111,7 @@ const ProjectContent = ({
               className={
                 sliderCount === 0 ? style.image_icon_disable : style.image_icon
               }
-              onClick={() => handleClick("left")}
+              onClick={() => handleClick('left')}
             />
           </div>
           <div className={style.image_slider_btn_item}>
@@ -126,7 +126,7 @@ const ProjectContent = ({
                   ? style.image_icon_disable
                   : style.image_icon
               }
-              onClick={() => handleClick("right")}
+              onClick={() => handleClick('right')}
             />
           </div>
         </div>

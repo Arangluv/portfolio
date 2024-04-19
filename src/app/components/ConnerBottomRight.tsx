@@ -1,4 +1,4 @@
-import { stop_start, stop_end, stop_middle } from "../styles/main.css";
+import { stop_start, stop_end, stop_middle } from '../styles/main.css';
 
 const CornerBottomRight = ({ className }: { className: string }) => {
   return (

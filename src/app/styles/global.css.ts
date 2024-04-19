@@ -1,6 +1,6 @@
 // .src/styles/global.css.ts
 
-import { globalStyle } from "@vanilla-extract/css";
+import { globalStyle } from '@vanilla-extract/css';
 
 globalStyle(
   `html, body, div, span, applet, object, iframe,
@@ -20,37 +20,37 @@ time, mark, audio, video`,
     margin: 0,
     padding: 0,
     border: 0,
-    fontSize: "100%",
-    font: "inherits",
-    verticalAlign: "baseline",
-  }
+    fontSize: '100%',
+    font: 'inherits',
+    verticalAlign: 'baseline',
+  },
 );
-globalStyle("body", {
+globalStyle('body', {
   lineHeight: 1,
-  height: "100vh",
-  width: "100%",
-  backgroundColor: "#1D1D20",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
+  height: '100vh',
+  width: '100%',
+  backgroundColor: '#1D1D20',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
 });
 
-globalStyle("ol, ul", {
-  listStyle: "none",
+globalStyle('ol, ul', {
+  listStyle: 'none',
 });
 
-globalStyle("blockquote, q", {
-  quotes: "none",
+globalStyle('blockquote, q', {
+  quotes: 'none',
 });
 
 globalStyle(
   `blockquote:before, blockquote:after,
 q:before, q:after`,
   {
-    content: "none",
-  }
+    content: 'none',
+  },
 );
-globalStyle("table", {
-  borderCollapse: "collapse",
+globalStyle('table', {
+  borderCollapse: 'collapse',
   borderSpacing: 0,
 });

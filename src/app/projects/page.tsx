@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { useEffect, useRef, useState } from "react";
-import * as style from "../styles/projects/project.css";
-import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from "react-icons/md";
-import ProjectContent from "../components/ProjectContent";
-import projectData from "../assets/projectData";
-import ProjectDescription from "../components/ProjectDescription";
+import { useEffect, useRef, useState } from 'react';
+import * as style from '../styles/projects/project.css';
+import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from 'react-icons/md';
+import ProjectContent from '../components/ProjectContent';
+import projectData from '../assets/projectData';
+import ProjectDescription from '../components/ProjectDescription';
 
 interface ContentStyleInfo {
   contentWidth: number | undefined;
@@ -28,33 +28,33 @@ const Project = () => {
   });
   useEffect(() => {
     setMounted(true);
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     setContentStyleInfo({
       contentWidth: mainContentRef.current?.offsetWidth,
       contentHeight: mainContentRef.current?.offsetHeight,
     });
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, [mounted, windowWidth]);
 
   const handleClick = (direction: string) => {
     if (!sliderContentRef.current) return;
 
-    if (direction === "left" && sliderCount !== 0) {
+    if (direction === 'left' && sliderCount !== 0) {
       // 이전 프로젝트를 보려고 하는 경우
       const calculateMovePixel = contentStyleInfo.contentWidth
         ? contentStyleInfo.contentWidth * (sliderCount - 1)
         : 0;
       sliderContentRef.current.style.transform = `translateX(-${calculateMovePixel}px)`;
-      setSliderCount((pre) => pre - 1);
+      setSliderCount(pre => pre - 1);
     }
-    if (direction === "right" && sliderCount !== MAX_COUNT - 1) {
+    if (direction === 'right' && sliderCount !== MAX_COUNT - 1) {
       const calculateMovePixel = contentStyleInfo.contentWidth
         ? contentStyleInfo.contentWidth * (sliderCount + 1)
         : 0;
       sliderContentRef.current.style.transform = `translateX(-${calculateMovePixel}px)`;
-      setSliderCount((pre) => pre + 1);
+      setSliderCount(pre => pre + 1);
     }
   };
   if (!mounted) return <div></div>;
@@ -64,9 +64,9 @@ const Project = () => {
       <div className={style.prev_btn_item}>
         <MdOutlineNavigateBefore
           className={`${style.btn_icon} ${
-            sliderCount === 0 ? style.unable_icon : ""
+            sliderCount === 0 ? style.unable_icon : ''
           }`}
-          onClick={() => handleClick("left")}
+          onClick={() => handleClick('left')}
         />
       </div>
       <div ref={mainContentRef} className={style.slider_wrapper}>
@@ -96,9 +96,9 @@ const Project = () => {
       </div>
       <div className={style.next_btn_item}>
         <MdOutlineNavigateNext
-          onClick={() => handleClick("right")}
+          onClick={() => handleClick('right')}
           className={`${style.btn_icon} ${
-            sliderCount === 2 ? style.unable_icon : ""
+            sliderCount === 2 ? style.unable_icon : ''
           }`}
         />
       </div>

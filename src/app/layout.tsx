@@ -1,26 +1,26 @@
-import type { Metadata } from "next";
-import { Noto_Sans_KR, Karla } from "next/font/google";
-import "./styles/global.css";
-import Provider from "./context/ThemeProvider";
-import CornerTopLeft from "./components/CornerTopLeft";
-import * as style from "./styles/main.css";
-import Header from "./components/Header";
-import Category from "./components/Category";
-import Footer from "./components/Footer";
-import CornerBottomRight from "./components/ConnerBottomRight";
+import type { Metadata } from 'next';
+import { Noto_Sans_KR, Karla } from 'next/font/google';
+import './styles/global.css';
+import Provider from './context/ThemeProvider';
+import CornerTopLeft from './components/CornerTopLeft';
+import * as style from './styles/main.css';
+import Header from './components/Header';
+import Category from './components/Category';
+import Footer from './components/Footer';
+import CornerBottomRight from './components/ConnerBottomRight';
 
 export const metadata: Metadata = {
   title: "류현수's Portfolio",
-  description: "류현수의 웹 포트폴리오",
+  description: '류현수의 웹 포트폴리오',
 };
 
 const notoSansKr = Noto_Sans_KR({
-  weight: ["400"],
-  subsets: ["latin"],
+  weight: ['400'],
+  subsets: ['latin'],
 });
 const karla = Karla({
-  weight: ["400"],
-  subsets: ["latin"],
+  weight: ['400'],
+  subsets: ['latin'],
 });
 export default function RootLayout({
   children,

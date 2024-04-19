@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
 import {
   darkTheme_1,
   darkTheme_2,
   darkTheme_3,
   darkTheme_4,
-} from "../styles/theme.css";
-import { ThemeProvider } from "next-themes";
+} from '../styles/theme.css';
+import { ThemeProvider } from 'next-themes';
 
 const Provider = ({ children }: { children: React.ReactNode }) => {
   return (

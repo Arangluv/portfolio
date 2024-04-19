@@ -1,4 +1,4 @@
-import * as style from "../styles/projects/project.css";
+import * as style from '../styles/projects/project.css';
 
 interface DescriptionInfo {
   period: string[];
@@ -50,7 +50,7 @@ const ProjectDescription = (props: DescriptionInfo) => {
               <span className={style.intro_sub_title_accent}>front</span>
             </div>
             <div className={style.introduction_rear}>
-              <p className={style.intro_description}>{frontend?.join(", ")}</p>
+              <p className={style.intro_description}>{frontend?.join(', ')}</p>
             </div>
           </div>
         ) : null}
@@ -60,7 +60,7 @@ const ProjectDescription = (props: DescriptionInfo) => {
               <span className={style.intro_sub_title_accent}>backend</span>
             </div>
             <div className={style.introduction_rear}>
-              <p className={style.intro_description}>{backend?.join(", ")}</p>
+              <p className={style.intro_description}>{backend?.join(', ')}</p>
             </div>
           </div>
         ) : null}
@@ -71,7 +71,7 @@ const ProjectDescription = (props: DescriptionInfo) => {
             </div>
             <div className={style.introduction_rear}>
               <p className={style.intro_description}>
-                {deployment?.join(", ")}
+                {deployment?.join(', ')}
               </p>
             </div>
           </div>

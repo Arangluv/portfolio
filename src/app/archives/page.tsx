@@ -1,7 +1,7 @@
-import * as style from "../styles/archives/archives.css";
-import GithubIcon from "../assets/github.svg";
-import NotionIcon from "../assets/notion.svg";
-import { FaCheck } from "react-icons/fa";
+import * as style from '../styles/archives/archives.css';
+import GithubIcon from '../assets/github.svg';
+import NotionIcon from '../assets/notion.svg';
+import { FaCheck } from 'react-icons/fa';
 const Archiving = () => {
   return (
     <div className={style.archives_wrapper}>
