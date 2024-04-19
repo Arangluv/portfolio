@@ -1,11 +1,12 @@
 'use client';
 
-import * as style from '../styles/category.css';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-const Category = () => {
+import * as style from '../styles/category.css';
+
+export default function Category() {
   const [mounted, setMounted] = useState(false);
   const { setTheme } = useTheme();
   const pathname = usePathname();
@@ -26,7 +27,8 @@ const Category = () => {
   useEffect(() => {
     setMounted(true);
   }, []);
-  if (!mounted) return <div></div>;
+
+  if (!mounted) return <div />;
 
   return (
     <ul className={style.wrapper}>
@@ -52,6 +54,4 @@ const Category = () => {
       </Link>
     </ul>
   );
-};
-
-export default Category;
+}

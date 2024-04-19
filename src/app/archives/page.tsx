@@ -1,8 +1,9 @@
+import { FaCheck } from 'react-icons/fa';
 import * as style from '../styles/archives/archives.css';
 import GithubIcon from '../assets/github.svg';
 import NotionIcon from '../assets/notion.svg';
-import { FaCheck } from 'react-icons/fa';
-const Archiving = () => {
+
+export default function Archiving() {
   return (
     <div className={style.archives_wrapper}>
       {/* sub container line */}
@@ -33,6 +34,7 @@ const Archiving = () => {
               href="https://github.com/Arangluv"
               className={style.read_more_text}
               target="_blank"
+              rel="noreferrer"
             >
               READ MORE
             </a>
@@ -72,6 +74,7 @@ const Archiving = () => {
               href="https://observant-bite-62a.notion.site/Next-js-4464ac8b6b5e4c9eb4404255746b2316"
               className={style.read_more_text}
               target="_blank"
+              rel="noreferrer"
             >
               READ MORE
             </a>
@@ -81,6 +84,4 @@ const Archiving = () => {
       {/* 위에만 디자인해서 template copy and paste */}
     </div>
   );
-};
-
-export default Archiving;
+}

@@ -1,10 +1,12 @@
 'use client';
 
-import * as style from '../styles/projects/project.css';
-import { assignInlineVars } from '@vanilla-extract/dynamic';
-import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from 'react-icons/md';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
+import { assignInlineVars } from '@vanilla-extract/dynamic';
+import uuid from 'react-uuid';
+import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from 'react-icons/md';
+import * as style from '../styles/projects/project.css';
+
 interface ContentStyleInfo {
   children: React.ReactNode;
   title: string;
@@ -16,13 +18,13 @@ interface ImageContentStyleInfo {
   imageContentWidth: number | undefined;
   imageContentHeight: number | undefined;
 }
-const ProjectContent = ({
+export default function ProjectContent({
   children,
   title,
   images,
   contentWidth,
   contentHeight,
-}: ContentStyleInfo) => {
+}: ContentStyleInfo) {
   const [mounted, setMounted] = useState(false);
   const [sliderCount, setSliderCount] = useState(0); // 처음 0, 마지막은 동적으로 변한다.
   const imageWrapperRef = useRef<HTMLDivElement>(null);
@@ -50,8 +52,6 @@ const ProjectContent = ({
     };
   }, [mounted, windowWidth]);
 
-  if (!mounted) return <div></div>;
-
   const handleClick = (direction: string) => {
     if (!imageSliderRef.current) return;
 
@@ -71,6 +71,9 @@ const ProjectContent = ({
       setSliderCount(pre => pre + 1);
     }
   };
+
+  if (!mounted) return <div />;
+
   return (
     <div
       className={style.main_content_wrapper}
@@ -91,19 +94,17 @@ const ProjectContent = ({
         })}
       >
         <div ref={imageSliderRef} className={style.image_slider_moveable}>
-          {images.map((image, idx) => {
-            return (
-              <Image
-                width={500}
-                height={600}
-                alt="project content image"
-                src={image}
-                className={style.image_size}
-                priority={true}
-                key={idx}
-              />
-            );
-          })}
+          {images.map(image => (
+            <Image
+              width={500}
+              height={600}
+              alt="project content image"
+              src={image}
+              className={style.image_size}
+              priority
+              key={uuid()}
+            />
+          ))}
         </div>
         <div className={style.image_slider_btn_wrapper}>
           <div className={style.image_slider_prev_item}>
@@ -134,6 +135,4 @@ const ProjectContent = ({
       {children}
     </div>
   );
-};
-
-export default ProjectContent;
+}

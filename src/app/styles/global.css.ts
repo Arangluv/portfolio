@@ -1,4 +1,4 @@
-// .src/styles/global.css.ts
+/* eslint-disable */
 
 import { globalStyle } from '@vanilla-extract/css';
 

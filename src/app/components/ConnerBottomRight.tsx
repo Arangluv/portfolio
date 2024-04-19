@@ -1,6 +1,10 @@
 import { stop_start, stop_end, stop_middle } from '../styles/main.css';
 
-const CornerBottomRight = ({ className }: { className: string }) => {
+export default function CornerBottomRight({
+  className,
+}: {
+  className: string;
+}) {
   return (
     <svg
       data-name="corner-bottom-right"
@@ -22,6 +26,4 @@ const CornerBottomRight = ({ className }: { className: string }) => {
       />
     </svg>
   );
-};
-
-export default CornerBottomRight;
+}

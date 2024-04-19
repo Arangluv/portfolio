@@ -1,14 +1,14 @@
 'use client';
 
+import { ThemeProvider } from 'next-themes';
 import {
   darkTheme_1,
   darkTheme_2,
   darkTheme_3,
   darkTheme_4,
 } from '../styles/theme.css';
-import { ThemeProvider } from 'next-themes';
 
-const Provider = ({ children }: { children: React.ReactNode }) => {
+export default function Provider({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider
       attribute="class"
@@ -23,6 +23,4 @@ const Provider = ({ children }: { children: React.ReactNode }) => {
       {children}
     </ThemeProvider>
   );
-};
-
-export default Provider;
+}

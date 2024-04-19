@@ -10,7 +10,7 @@ interface DescriptionInfo {
   deployment: string[] | null;
 }
 
-const ProjectDescription = (props: DescriptionInfo) => {
+export default function ProjectDescription(props: DescriptionInfo) {
   const { period, overview, functions, github, frontend, backend, deployment } =
     props;
   return (
@@ -79,6 +79,4 @@ const ProjectDescription = (props: DescriptionInfo) => {
       </div>
     </div>
   );
-};
-
-export default ProjectDescription;
+}

@@ -1,6 +1,6 @@
 import * as style from '../styles/main.css';
 
-const CornerTopLeft = ({ className }: { className: string }) => {
+export default function CornerTopLeft({ className }: { className: string }) {
   return (
     <svg
       width="300"
@@ -22,6 +22,4 @@ const CornerTopLeft = ({ className }: { className: string }) => {
       />
     </svg>
   );
-};
-
-export default CornerTopLeft;
+}

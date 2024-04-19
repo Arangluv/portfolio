@@ -32,7 +32,7 @@ export default function RootLayout({
       <body className={(notoSansKr.className, karla.className)}>
         <Provider>
           <div className={style.main_frame}>
-            <CornerTopLeft className={style.top_left_corner}></CornerTopLeft>
+            <CornerTopLeft className={style.top_left_corner} />
             <main className={style.main_wrapper}>
               <section className={style.main_content_wrapper}>
                 {children}
@@ -46,16 +46,14 @@ export default function RootLayout({
                 <h2 className={style.category_title}>Category</h2>
               </div>
               <nav className={`${style.grid_item_3} ${style.grid_order_third}`}>
-                <div className={style.top_left_category_corner}></div>
+                <div className={style.top_left_category_corner} />
                 <Category />
               </nav>
               <footer className={`${style.grid_item} ${style.grid_order_last}`}>
                 <Footer />
               </footer>
             </main>
-            <CornerBottomRight
-              className={style.bottom_right_corner}
-            ></CornerBottomRight>
+            <CornerBottomRight className={style.bottom_right_corner} />
           </div>
         </Provider>
       </body>

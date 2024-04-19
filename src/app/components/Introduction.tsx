@@ -1,6 +1,6 @@
 import * as style from '../styles/introduction/introduction.css';
 
-const Introduction = () => {
+export default function Introduction() {
   return (
     <div className={style.intro_wrapper}>
       <h1 className={style.main_title}>WELLCOME</h1>
@@ -21,6 +21,4 @@ const Introduction = () => {
       </span>
     </div>
   );
-};
-
-export default Introduction;
+}

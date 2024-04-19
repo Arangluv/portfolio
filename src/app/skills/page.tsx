@@ -18,7 +18,8 @@ import AwsIcon from '../assets/amazonaws.svg';
 import VercelIcon from '../assets/vercel.svg';
 import GitIcon from '../assets/git.svg';
 import GithubIcon from '../assets/github.svg';
-const Skills = () => {
+
+export default function Skills() {
   return (
     <div className={style.wrapper}>
       <div className={style.front_stack_item}>
@@ -120,6 +121,4 @@ const Skills = () => {
       </div>
     </div>
   );
-};
-
-export default Skills;
+}

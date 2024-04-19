@@ -1,18 +1,19 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import * as style from '../styles/projects/project.css';
 import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from 'react-icons/md';
+import uuid from 'react-uuid';
 import ProjectContent from '../components/ProjectContent';
 import projectData from '../assets/projectData';
 import ProjectDescription from '../components/ProjectDescription';
+import * as style from '../styles/projects/project.css';
 
 interface ContentStyleInfo {
   contentWidth: number | undefined;
   contentHeight: number | undefined;
 }
 
-const Project = () => {
+export default function Project() {
   const [mounted, setMounted] = useState(false);
   const [sliderCount, setSliderCount] = useState(0); // 처음 0, 마지막은 동적으로 변한다.
   const MAX_COUNT = projectData.length;
@@ -57,7 +58,8 @@ const Project = () => {
       setSliderCount(pre => pre + 1);
     }
   };
-  if (!mounted) return <div></div>;
+
+  if (!mounted) return <div />;
 
   return (
     <div className={style.project_wrapper}>
@@ -71,27 +73,25 @@ const Project = () => {
       </div>
       <div ref={mainContentRef} className={style.slider_wrapper}>
         <div className={style.slider_moveable} ref={sliderContentRef}>
-          {projectData.map((data, idx) => {
-            return (
-              <ProjectContent
-                title={data.title}
-                images={data.images}
-                contentWidth={contentStyleInfo.contentWidth}
-                contentHeight={contentStyleInfo.contentHeight}
-                key={idx}
-              >
-                <ProjectDescription
-                  period={data.period}
-                  overview={data.overview}
-                  functions={data.functions}
-                  github={data.github}
-                  frontend={data.frontend}
-                  backend={data.backend}
-                  deployment={data.deployment}
-                />
-              </ProjectContent>
-            );
-          })}
+          {projectData.map(data => (
+            <ProjectContent
+              title={data.title}
+              images={data.images}
+              contentWidth={contentStyleInfo.contentWidth}
+              contentHeight={contentStyleInfo.contentHeight}
+              key={uuid()}
+            >
+              <ProjectDescription
+                period={data.period}
+                overview={data.overview}
+                functions={data.functions}
+                github={data.github}
+                frontend={data.frontend}
+                backend={data.backend}
+                deployment={data.deployment}
+              />
+            </ProjectContent>
+          ))}
         </div>
       </div>
       <div className={style.next_btn_item}>
@@ -103,21 +103,17 @@ const Project = () => {
         />
       </div>
       <div className={style.progress_state_item}>
-        {projectData.map((item, idx) => {
-          return (
-            <div
-              key={idx}
-              className={
-                sliderCount === idx
-                  ? style.progressiv_dot_active
-                  : style.progressiv_dot_inactive
-              }
-            ></div>
-          );
-        })}
+        {projectData.map((item, idx) => (
+          <div
+            key={uuid()}
+            className={
+              sliderCount === idx
+                ? style.progressiv_dot_active
+                : style.progressiv_dot_inactive
+            }
+          />
+        ))}
       </div>
     </div>
   );
-};
-
-export default Project;
+}
