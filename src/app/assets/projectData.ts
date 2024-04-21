@@ -6,6 +6,7 @@ interface ProjectData {
   github: string;
   frontend: string[] | null;
   backend: string[] | null;
+  database: string[] | null;
   deployment: string[] | null;
   images: string[];
 }
@@ -33,8 +34,9 @@ const projectData: ProjectData[] = [
     `,
     functions: '개발한 프로젝트의 개요보기, 기술스택 한눈에 보기',
     github: 'https://github.com/Arangluv/portfolio',
-    frontend: ['next.js', 'vanilla-extract'],
+    frontend: ['next.js', 'typescript', 'vanilla-extract'],
     backend: null,
+    database: null,
     deployment: ['Vercel'],
     images: [
       '/assets/project-images/portfolio/multi-themes.gif',
@@ -46,14 +48,39 @@ const projectData: ProjectData[] = [
   {
     title: '같이코딩 - 나만의 강의 사이트',
     period: ['2023-07', '2023-12'],
-    overview: `만든 강의를 한 플랫폼에 종속적이지 않고 관리하기 위한 개인만의 공간이 필요하여 제작하게 된 개인 강의 사이트입니다`,
-    functions: `local ffmpeg를 활용하여 mp4 미디어 파일을 m3u8로 sementation 후 aws S3에 업로드 하여 HLS 스트리밍을 지원 -> 강의 재생 지연을 최소화,
-      `,
-    github: 'https://github.com/Arangluv/portfolio',
-    frontend: ['next.js', 'vanilla-extract', 'anything'],
-    backend: ['express.js'],
+    overview: `만든 강의를 한 플랫폼에 종속적이지 않고 관리하기 위한 개인만의 공간이 필요하여 제작하게 된 개인 강의 사이트입니다.
+    
+    local ffmpeg를 활용하여 mp4 미디어 파일을 m3u8로 sementation 후 aws S3에 업로드 하여 HLS 스트리밍을 지원 -> 강의 재생 지연을 최소화`,
+    functions: `강사(admin) : 강의를 업로드 및 수정하기, 결제 정보 확인하기, 수강생들이 생성한 댓글, 이슈 확인하기
+    
+    수강생(clitent): 강의 결제하기, 이메일 / 카카오톡 간편 로그인하기, 수강중인 강의 확인하기, 생성한 이슈 / 댓글 대쉬보드에서 확인하기, 강의 수강하기
+    `,
+    github: 'https://github.com/Arangluv/togetercoding',
+    frontend: [
+      'React',
+      'typescript',
+      'recoil',
+      'react-query',
+      'react-hook-form',
+      'styled-components',
+    ],
+    backend: ['express.js', 'node.js'],
+    database: ['mongoDB'],
     deployment: null,
-    images: ['/assets/project-images/portfolio/multi-themes.gif'],
+    images: [
+      '/assets/project-images/togethercoding/join.gif',
+      '/assets/project-images/togethercoding/kakao-login.gif',
+      '/assets/project-images/togethercoding/make-lecture.gif',
+      '/assets/project-images/togethercoding/upload-video.gif',
+      '/assets/project-images/togethercoding/load-lecture.gif',
+      '/assets/project-images/togethercoding/payment.gif',
+      '/assets/project-images/togethercoding/payment-1.gif',
+      '/assets/project-images/togethercoding/see-video.gif',
+      '/assets/project-images/togethercoding/make-issue.gif',
+      '/assets/project-images/togethercoding/dashboard.gif',
+      '/assets/project-images/togethercoding/confirm-issue.gif',
+      '/assets/project-images/togethercoding/reply-issue.gif',
+    ],
   },
 ];
 

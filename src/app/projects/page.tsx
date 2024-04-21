@@ -88,6 +88,7 @@ export default function Project() {
                 github={data.github}
                 frontend={data.frontend}
                 backend={data.backend}
+                database={data.database}
                 deployment={data.deployment}
               />
             </ProjectContent>

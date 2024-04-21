@@ -7,12 +7,21 @@ interface DescriptionInfo {
   github: string;
   frontend: string[] | null;
   backend: string[] | null;
+  database: string[] | null;
   deployment: string[] | null;
 }
 
 export default function ProjectDescription(props: DescriptionInfo) {
-  const { period, overview, functions, github, frontend, backend, deployment } =
-    props;
+  const {
+    period,
+    overview,
+    functions,
+    github,
+    frontend,
+    backend,
+    deployment,
+    database,
+  } = props;
   return (
     <div className={style.introduction_item}>
       <div className={style.project_introduction_wrapper}>
@@ -66,6 +75,16 @@ export default function ProjectDescription(props: DescriptionInfo) {
             </div>
             <div className={style.introduction_rear}>
               <p className={style.intro_description}>{backend?.join(', ')}</p>
+            </div>
+          </div>
+        ) : null}
+        {database ? (
+          <div className={style.introduction_sub_wrapper}>
+            <div className={style.introduction_front}>
+              <span className={style.intro_sub_title_accent}>Database</span>
+            </div>
+            <div className={style.introduction_rear}>
+              <p className={style.intro_description}>{database?.join(', ')}</p>
             </div>
           </div>
         ) : null}
