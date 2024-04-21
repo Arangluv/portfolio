@@ -39,7 +39,12 @@ export default function ProjectDescription(props: DescriptionInfo) {
             <span className={style.intro_sub_title_accent}>github</span>
           </div>
           <div className={style.introduction_rear}>
-            <a href={github} className={style.intro_description_link}>
+            <a
+              href={github}
+              target="_blank"
+              rel="noreferrer"
+              className={style.intro_description_link}
+            >
               {github}
             </a>
           </div>

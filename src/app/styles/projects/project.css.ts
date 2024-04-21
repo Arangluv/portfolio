@@ -356,7 +356,12 @@ export const intro_description = style({
     },
   },
 });
-
+export const intro_description_func = style([
+  intro_description,
+  {
+    flexDirection: 'column',
+  },
+]);
 export const intro_description_link = style([
   intro_description,
   {
