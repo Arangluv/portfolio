@@ -19,10 +19,11 @@ const projectData: ProjectData[] = [
 
     기존 react로만 개발하는 과정에서 SSR의 필요성을 느끼고 next.js를 학습하면서 만든 프로젝트 입니다.
     
-    후술추가
+    image component를 통한 이미지 최적화, 반복적인 UI 처리 등 next 14에서 제공하는 다양한 기능을 사용해보며, 
+    기능이 복잡한 프로젝트를 만들어 보기 전 프로젝트 세팅, 폴더 구조, 문법을 익히기에 좋은 프로젝트 였습니다
     `,
     functions:
-      '외부 라이브러리 없이 carousel 구현, zero-runtime css를 지원하는 vanilla-extract로 반응형 웹앱 구현, next-images를 통한 이미지 최적화, next-themes를 활용한 multi themes 구현',
+      '외부 라이브러리 없이 carousel 구현, zero-runtime css를 지원하는 vanilla-extract로 반응형 웹앱 구현, next-images를 통한 이미지 최적화, next-themes를 활용한 multi themes 구현, eslint, prettier 설정으로 코드 가독성 및 통일성 개선',
     github: 'https://github.com/Arangluv/portfolio',
     frontend: ['next.js', 'vanilla-extract'],
     backend: null,
