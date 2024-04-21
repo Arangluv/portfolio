@@ -44,7 +44,6 @@ const projectData: ProjectData[] = [
       '/assets/project-images/portfolio/project-slide.gif',
     ],
   },
-
   {
     title: '같이코딩 - 나만의 강의 사이트',
     period: ['2023-07', '2023-12'],
@@ -89,6 +88,44 @@ const projectData: ProjectData[] = [
       '/assets/project-images/togethercoding/dashboard.gif',
       '/assets/project-images/togethercoding/confirm-issue.gif',
       '/assets/project-images/togethercoding/reply-issue.gif',
+    ],
+  },
+  {
+    title: 'AQUIZ - 퀴즈 사이트',
+    period: ['2022-11', '2023-02'],
+    overview: `사용자가 관심을 가지는 분야에 대한 퀴즈를 만들고 여러 사람들과 공유할 수 있는 서비스입니다.
+
+    실제로 서비스를 운영할 생각으로 프로젝트를 제작하였기에 UI & UI, 기획에 신경 썼었습니다.
+
+    프론트, 백엔드, 배포까지 혼자 진행한 프로젝트로 해당 경험을 통해 전반적인 웹서비스의 흐름을 이해하는데 있어 큰 도움이 되었던 프로젝트입니다.
+
+    사용자가 동적으로 문제를 만들고 수정하는 상황에 대해 각 문제를 useState로 관리했습니다.
+
+    관리해야하는 제어 컴포넌트가 많아졌을 때 state와 handler함수가 늘어남에 따라 코드가 길어지고 유지보수가 어려워진다는 것을 느끼고 추후 form 관리 라이브러리를 학습했습니다.
+
+    데이터를 한번에 받아오는 것이 아닌 필요한 부분만 받아오기 위해 useInView를 사용하여 Infinite scroll를 구현했습니다
+    
+    SEO최적화를 위해 React Helmet과 react-router-sitemap을 사용했습니다.
+
+    React Helmet을 통해 페이지 컴포넌트 별 메타 태그를 수정하고,
+
+    react-router-sitemap에서 제공하는 가이드라인을 참고하여 퀴즈ID 별로 동적 사이트맵을 생성하도록 했습니다.
+
+    배포까지 하였으나, 서버비용 문제로 인스턴스를 비활성화 해두었습니다.
+    `,
+    functions: `퀴즈 생성하기, 푼 퀴즈 확인하기, 만든 퀴즈 수정하기`,
+    github: 'https://github.com/Arangluv/AQUIZ-Project',
+    frontend: ['React', 'Javascript', 'styled-components'],
+    backend: ['express.js', 'node.js'],
+    database: ['mongoDB'],
+    deployment: ['AWS EC2, S3, CloudFront'],
+    images: [
+      '/assets/project-images/aquiz/load-quiz.gif',
+      '/assets/project-images/aquiz/make-quiz.gif',
+      '/assets/project-images/aquiz/make-quiz-1.gif',
+      '/assets/project-images/aquiz/modify-quiz.gif',
+      '/assets/project-images/aquiz/solve-quiz.gif',
+      '/assets/project-images/aquiz/solved-quiz.gif',
     ],
   },
 ];
