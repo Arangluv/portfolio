@@ -20,8 +20,10 @@ export default function Project() {
   const mainContentRef = useRef<HTMLDivElement>(null);
   const sliderContentRef = useRef<HTMLDivElement>(null);
   const [windowWidth, setWindowWidth] = useState<null | number>(null);
+  const [windowHeight, setWindowHeight] = useState<null | number>(null);
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
+    setWindowHeight(window.innerHeight);
   };
   const [contentStyleInfo, setContentStyleInfo] = useState<ContentStyleInfo>({
     contentWidth: 0,
@@ -37,7 +39,7 @@ export default function Project() {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, [mounted, windowWidth]);
+  }, [mounted, windowWidth, windowHeight]);
 
   const handleClick = (direction: string) => {
     if (!sliderContentRef.current) return;
