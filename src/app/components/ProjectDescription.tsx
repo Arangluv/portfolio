@@ -27,16 +27,6 @@ export default function ProjectDescription(props: DescriptionInfo) {
       <div className={style.project_introduction_wrapper}>
         <div className={style.introduction_sub_wrapper}>
           <div className={style.introduction_front}>
-            <span className={style.intro_sub_title}>
-              {period[0]} — &nbsp; {period[1]}
-            </span>
-          </div>
-          <div className={style.introduction_rear}>
-            <p className={style.intro_description}>{overview}</p>
-          </div>
-        </div>
-        <div className={style.seperated_wrapper}>
-          <div className={style.introduction_front}>
             <span className={style.intro_sub_title_accent}>주요기능</span>
           </div>
           <div className={style.introduction_rear}>
@@ -100,6 +90,16 @@ export default function ProjectDescription(props: DescriptionInfo) {
             </div>
           </div>
         ) : null}
+        <div className={style.seperated_wrapper}>
+          <div className={style.introduction_front}>
+            <span className={style.intro_sub_title}>
+              {period[0]} — &nbsp; {period[1]}
+            </span>
+          </div>
+          <div className={style.introduction_rear}>
+            <p className={style.intro_description}>{overview}</p>
+          </div>
+        </div>
       </div>
     </div>
   );
