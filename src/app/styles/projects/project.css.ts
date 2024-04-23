@@ -55,7 +55,7 @@ export const main_content_wrapper = style({
     },
     'screen and (max-width:479px)': {
       gridTemplateColumns: 'none',
-      gridTemplateRows: '1fr 4.5fr 4.5fr',
+      gridTemplateRows: '0.5fr 3.5fr 6fr',
     },
   },
 });
