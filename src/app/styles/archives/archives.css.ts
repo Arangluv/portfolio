@@ -40,6 +40,10 @@ export const archive_item_container = style({
       height: '90%',
     },
     'screen and (max-width:479px)': {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
       width: '80%',
       height: '80%',
     },
@@ -64,6 +68,19 @@ export const archive_sub_container = style({
   justifyContent: 'center',
   marginBottom: 10,
 });
+export const archive_sub_icon_container = style([
+  archive_sub_container,
+  {
+    '@media': {
+      'screen and (max-width:479px)': {
+        position: 'absolute',
+        top: 10,
+        left: '50%',
+        transform: 'translateX(-50%)',
+      },
+    },
+  },
+]);
 export const icon = style({
   fill: vars.themeColor.color.mainFontColor,
   width: 80,

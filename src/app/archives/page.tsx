@@ -10,11 +10,10 @@ export default function Archiving() {
       <div className={style.grid_item}>
         {/* sub container item line */}
         <div className={style.archive_item_container}>
-          <div className={style.archive_sub_container}>
+          <div className={style.archive_sub_icon_container}>
             <GithubIcon className={style.icon} />
             <span className={style.archive_title}>GITHUB</span>
           </div>
-
           <div className={style.description_box}>
             <span className={style.archive_description}>
               <div className={style.archive_icon_container}>
@@ -44,7 +43,7 @@ export default function Archiving() {
       <div className={style.grid_item}>
         {/* sub container item line */}
         <div className={style.archive_item_container}>
-          <div className={style.archive_sub_container}>
+          <div className={style.archive_sub_icon_container}>
             <NotionIcon className={style.icon} />
             <span className={style.archive_title}>Notion</span>
           </div>

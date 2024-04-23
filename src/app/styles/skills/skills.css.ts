@@ -2,6 +2,7 @@
 
 import { style } from '@vanilla-extract/css';
 import { vars } from '../theme.css';
+import { redirect } from 'next/dist/server/api-utils';
 
 export const wrapper = style({
   display: 'grid',
@@ -78,7 +79,7 @@ export const title = style({
     },
     'screen and (min-width:480px) and (max-width:767px)': {},
     'screen and (max-width:479px)': {
-      fontSize: vars.fontSize.small,
+      fontSize: vars.fontSize.micro,
     },
   },
 });
@@ -115,8 +116,8 @@ export const icon_container = style({
     },
     'screen and (min-width:480px) and (max-width:767px)': {},
     'screen and (max-width:479px)': {
-      minWidth: 50,
-      height: 50,
+      minWidth: 40,
+      height: 40,
       margin: 3,
     },
   },
@@ -135,7 +136,7 @@ export const icon_title = style({
     },
     'screen and (min-width:480px) and (max-width:767px)': {},
     'screen and (max-width:479px)': {
-      fontSize: vars.fontSize.micro,
+      fontSize: 11,
     },
   },
 });

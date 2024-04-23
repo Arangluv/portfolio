@@ -22,8 +22,9 @@ export const main_frame = style({
       height: '95vh',
     },
     'screen and (max-width:479px)': {
+      overflow: 'scroll',
       width: '100vw',
-      height: '100vh',
+      height: '135vh',
     },
   },
 });
@@ -44,7 +45,7 @@ export const main_wrapper = style({
     'screen and (max-width:479px)': {
       // 모바일
       gridTemplateColumns: '1fr 1fr',
-      gridTemplateRows: '20fr 1fr 1fr 1fr',
+      gridTemplateRows: '10fr 1fr 1fr 1fr',
       gap: 5,
     },
   },
@@ -69,7 +70,6 @@ export const grid_item = style({
   alignItems: 'center',
   justifyContent: 'center',
   boxSizing: 'border-box',
-
   color: vars.themeColor.color.mainFontColor,
 });
 export const grid_order_first = style({
@@ -109,6 +109,7 @@ export const main_content_wrapper = style([
       'screen and (max-width:479px)': {
         gridColumn: '1 / 3',
         gridRow: '1 / 3',
+        height: '90vh',
         // 모바일
       },
     },

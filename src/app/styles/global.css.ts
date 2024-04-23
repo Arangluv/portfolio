@@ -27,7 +27,7 @@ time, mark, audio, video`,
 );
 globalStyle('body', {
   lineHeight: 1,
-  height: '100vh',
+  height: '100%',
   width: '100%',
   backgroundColor: '#1D1D20',
   display: 'flex',
