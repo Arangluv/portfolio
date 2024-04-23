@@ -79,7 +79,7 @@ export const title = style({
     },
     'screen and (min-width:480px) and (max-width:767px)': {},
     'screen and (max-width:479px)': {
-      fontSize: vars.fontSize.micro,
+      fontSize: vars.fontSize.small,
     },
   },
 });
@@ -89,7 +89,7 @@ export const title = style({
 export const icons_wrapper = style({
   display: 'flex',
   alignItems: 'center',
-
+  justifyContent: 'center',
   width: '100%',
   height: '100%',
   flexWrap: 'wrap',
@@ -116,9 +116,9 @@ export const icon_container = style({
     },
     'screen and (min-width:480px) and (max-width:767px)': {},
     'screen and (max-width:479px)': {
-      minWidth: 40,
-      height: 40,
-      margin: 3,
+      minWidth: 50,
+      height: 50,
+      margin: 5,
     },
   },
 });
@@ -136,7 +136,7 @@ export const icon_title = style({
     },
     'screen and (min-width:480px) and (max-width:767px)': {},
     'screen and (max-width:479px)': {
-      fontSize: 11,
+      fontSize: vars.fontSize.micro,
     },
   },
 });

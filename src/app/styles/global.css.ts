@@ -27,12 +27,17 @@ time, mark, audio, video`,
 );
 globalStyle('body', {
   lineHeight: 1,
-  height: '100%',
+  height: '100vh',
   width: '100%',
   backgroundColor: '#1D1D20',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  '@media': {
+    'screen and (max-width:479px)': {
+      height: '100%',
+    },
+  },
 });
 
 globalStyle('ol, ul', {
