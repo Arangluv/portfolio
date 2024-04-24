@@ -304,6 +304,10 @@ export const introduction_sub_wrapper = style({
     'screen and (min-width:768px) and (max-width:1023px)': {
       gridTemplateRows: 'repeat(2, auto)',
     },
+    'screen and (max-width:479px)': {
+      gridTemplateRows: 'repeat(2, auto)',
+      gridTemplateColumns: 'none',
+    },
   },
 });
 
@@ -332,6 +336,9 @@ export const intro_sub_title = style({
     'screen and (min-width:768px) and (max-width:1023px)': {
       fontSize: vars.fontSize.micro,
     },
+    'screen and (max-width:479px)': {
+      fontSize: 11,
+    },
   },
 });
 export const intro_sub_title_accent = style({
@@ -341,6 +348,9 @@ export const intro_sub_title_accent = style({
   '@media': {
     'screen and (min-width:768px) and (max-width:1023px)': {
       fontSize: vars.fontSize.micro,
+    },
+    'screen and (max-width:479px)': {
+      fontSize: 11,
     },
   },
 });
@@ -353,6 +363,9 @@ export const intro_description = style({
   '@media': {
     'screen and (min-width:768px) and (max-width:1023px)': {
       fontSize: vars.fontSize.micro,
+    },
+    'screen and (max-width:479px)': {
+      fontSize: 11,
     },
   },
 });
