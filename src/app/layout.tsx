@@ -12,6 +12,9 @@ import CornerBottomRight from './components/ConnerBottomRight';
 export const metadata: Metadata = {
   title: "류현수's Portfolio",
   description: '류현수의 웹 포트폴리오',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 const notoSansKr = Noto_Sans_KR({
