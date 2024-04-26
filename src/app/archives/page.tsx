@@ -70,7 +70,7 @@ export default function Archiving() {
           </div>
           <div className={style.read_more}>
             <a
-              href="https://observant-bite-62a.notion.site/Next-js-4464ac8b6b5e4c9eb4404255746b2316"
+              href="https://observant-bite-62a.notion.site/Coding-Study-4e85885c0c094f65a1403fdcafed8211"
               className={style.read_more_text}
               target="_blank"
               rel="noreferrer"
