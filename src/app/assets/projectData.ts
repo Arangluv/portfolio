@@ -49,7 +49,9 @@ const projectData: ProjectData[] = [
     period: ['2023-07', '2023-12'],
     overview: `만든 강의를 한 플랫폼에 종속적이지 않고 관리하기 위한 개인적인 공간이 필요하여 제작하게 강의 사이트입니다.
     
-    수강생들의 원할한 강의 시청을 위해 local ffmpeg를 활용하여 mp4 미디어 파일을 m3u8로 sementation 후 aws S3에 업로드 하여 HLS 스트리밍을 지원 했습니다
+    수강생들의 원할한 강의 시청을 위해 local ffmpeg를 활용하여 mp4 미디어 파일을 m3u8로 sementation 후 aws S3에 업로드 하여 HLS 스트리밍을 지원 했습니다.
+
+    파일 분할을 통해 test mp4 파일을 10.5MB에서 7.8MB로 압축하여 약 26%의 네트워크 비용을 절감할 수 있었습니다.
     
     강의 / 댓글 / 이슈 / 프로필 등 데이터를 생성 및 추가하기 위한 많은 form element를 사용했어야 했습니다.
     
