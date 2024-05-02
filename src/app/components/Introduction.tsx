@@ -18,10 +18,6 @@ export default function Introduction() {
           운동, 공부 등과 같이 시간이 쌓였을 때 가치있는 것들을 중요하게
           생각하기 때문에 자기 개발을 소홀히 하지 않습니다
         </p>
-        <p className={style.paragraph}>
-          운동, 공부 등과 같이 시간이 쌓였을 때 가치있는 것들을 중요하게
-          생각하기 때문에 자기 개발을 소홀히 하지 않습니다
-        </p>
       </span>
     </div>
   );
