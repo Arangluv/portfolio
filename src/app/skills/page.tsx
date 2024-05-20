@@ -59,7 +59,7 @@ export default function Skills() {
           </div>
           <div className={style.icon_container}>
             <ReactHookFormIcon className={style.react_hook_form_icon} />
-            <span className={style.icon_title}>react-query</span>
+            <span className={style.icon_title}>react-hook-form</span>
           </div>
           <div className={style.icon_container}>
             <StyledComponentsIcon className={style.styledcomponents_icon} />
