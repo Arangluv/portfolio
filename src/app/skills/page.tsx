@@ -58,16 +58,16 @@ export default function Skills() {
             <span className={style.icon_title}>react-query</span>
           </div>
           <div className={style.icon_container}>
-            <ReactHookFormIcon className={style.react_hook_form_icon} />
-            <span className={style.icon_title}>react-hook-form</span>
-          </div>
-          <div className={style.icon_container}>
             <StyledComponentsIcon className={style.styledcomponents_icon} />
             <span className={style.icon_title}>styled-components</span>
           </div>
           <div className={style.icon_container}>
             <VanillaExtractIcon className={style.icon_size} />
             <span className={style.icon_title}>vanilla-extract</span>
+          </div>
+          <div className={style.icon_container}>
+            <ReactHookFormIcon className={style.react_hook_form_icon} />
+            <span className={style.icon_title}>react-hook-form</span>
           </div>
         </div>
       </div>
